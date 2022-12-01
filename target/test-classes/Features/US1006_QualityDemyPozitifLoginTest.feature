@@ -1,5 +1,4 @@
 
-@wip
 
 Feature: US1006 Dogru Kullanici ve Password ile Pozitif Login Testi
 

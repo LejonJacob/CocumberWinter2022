@@ -18,6 +18,7 @@ public class QualityDemyStepDefinitions {
     }
     @Then("Ana Sayfada Cikan Cookies'leri Kabul eder")
     public void anaSayfadaCikanCookiesLeriKabulEder() {
+        ReusableMethods.waitForVisibility(qualityDemyPage.cookies, 2);
         qualityDemyPage.cookies.click();
         ReusableMethods.waitForVisibility(qualityDemyPage.loginLink, 1);
 
