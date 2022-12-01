@@ -1,27 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="35.979">
-    <testcase classname="US1005 Parametreli Configuration Properties Kullanimi" name="TC09 Kullanici Anasayfasina Gidebilmeli" time="13.464">
-        <system-out>
-            <![CDATA[Given Kullanici "amazonUrl" Anasayfasina Gider..............................passed
-Then Url'nin "amazon" icerdigini test eder..................................passed
-And Sayfayi Kapatir.........................................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="8.397">
+    <testcase classname="US1006 Dogru Kullanici ve Password ile Pozitif Login Testi" name="TC12 Kullanici Quality Demy sitesine Login yapabilmeli" time="7.904">
+        <failure message="unknown error: net::ERR_NAME_NOT_RESOLVED&#10;  (Session info: chrome=108.0.5359.71)&#10;Build info: version: '4.6.0', revision: '79f1c02ae20'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.17'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [7110e5e03cd461be3da428265996ceec, get {url=https://www.qualitydemy.com}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.71, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51375}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51375/devtoo..., se:cdpVersion: 108.0.5359.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 7110e5e03cd461be3da428265996ceec" type="org.openqa.selenium.WebDriverException">
+            <![CDATA[Given Kullanici "qualityDemyUrl" Anasayfasina Gider.........................failed
+Then Kullanici Quality Demy anasayfasinda login linkine tiklar..............skipped
+Then Quality Demy Kullanici adi olarak "userGecerliEmail1" girer............skipped
+And Quality Demy Password olarak "userGecerliPassword1" girer...............skipped
+Then Quality Demy Login butonuna basar......................................skipped
+Then Quality Demy sayfasina basarili giris yapabildigini test eder..........skipped
+And Sayfayi Kapatir.........................................................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=108.0.5359.71)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7110e5e03cd461be3da428265996ceec, get {url=https://www.qualitydemy.com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.71, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51375}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51375/devtoo..., se:cdpVersion: 108.0.5359.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7110e5e03cd461be3da428265996ceec
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
+	at StepDefinitions.AmazonStepDefinitions.kullaniciAnasayfasinaGider(AmazonStepDefinitions.java:89)
+	at ✽.Kullanici "qualityDemyUrl" Anasayfasina Gider(file:///C:/Users/User/IdeaProjects/com.CocumberWinter2022/src/test/Resources/Features/US1006_QualityDemyPozitifLoginTest.feature:8)
 ]]>
-        </system-out>
-    </testcase>
-    <testcase classname="US1005 Parametreli Configuration Properties Kullanimi" name="TC10 Kullanici QualityDemy Anasayfasina Gidebilmeli" time="11.367">
-        <system-out>
-            <![CDATA[Given Kullanici "qualityDemyUrl" Anasayfasina Gider.........................passed
-Then Url'nin "qualitydemy" icerdigini test eder.............................passed
-And Sayfayi Kapatir.........................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="US1005 Parametreli Configuration Properties Kullanimi" name="TC10 Kullanici Wise Quarter Anasayfasina Gidebilmeli" time="10.56">
-        <system-out>
-            <![CDATA[Given Kullanici "wiseQuarterUrl" Anasayfasina Gider.........................passed
-Then Url'nin "wisequarter" icerdigini test eder.............................passed
-And Sayfayi Kapatir.........................................................passed
-]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>
