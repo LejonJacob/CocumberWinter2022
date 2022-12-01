@@ -1,6 +1,6 @@
 Feature: US1001 Amazon Arama Testi
 
-  @wip
+
   Scenario: TC01 Kullanici Amazonda Arama Yapabilmeli
 
     Given Kullanici Amazon Anasayfasina Gider

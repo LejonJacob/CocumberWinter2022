@@ -3,6 +3,7 @@ package StepDefinitions;
 import Pages.AmazonPage;
 import Utilities.ConfigReader;
 import Utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -37,9 +38,36 @@ public class AmazonStepDefinitions {
 
     @Then("Sayfayi Kapatir")
     public void sayfayi_kapatir() {
-
         Driver.closeDriver();
 
     }
 
+    @Then("Arama Kutusuna Java Yazip Aratir")
+    public void aramaKutusunaJavaYazipAratir() {
+
+        amazonPage.aramaKutusu.sendKeys("Java" + Keys.ENTER);
+    }
+
+    @And("Arama Sonuclarinin Java icerdigini Test Eder")
+    public void aramaSonuclarininJavaIcerdiginiTestEder() {
+        String actualAramaSonucu=amazonPage.aramaSonucElementi.getText();
+        String expectedkelime="Java";
+
+        Assert.assertTrue(actualAramaSonucu.contains(expectedkelime));
+
+    }
+
+    @Then("Arama Kutusuna Apple Yazip Aratir")
+    public void aramaKutusunaAppleYazipAratir() {
+        amazonPage.aramaKutusu.sendKeys("Apple" + Keys.ENTER);
+    }
+
+    @And("Arama Sonuclarinin Apple icerdigini Test Eder")
+    public void aramaSonuclarininAppleIcerdiginiTestEder() {
+        String actualAramaSonucu=amazonPage.aramaSonucElementi.getText();
+        String expectedkelime="Apple";
+
+        Assert.assertTrue(actualAramaSonucu.contains(expectedkelime));
+
+    }
 }

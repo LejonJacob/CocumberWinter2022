@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="17.527">
-    <testcase classname="US1001 Amazon Arama Testi" name="TC01 Kullanici Amazonda Arama Yapabilmeli" time="17.043">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="41.222">
+    <testcase classname="US1003 Background Kullanarak Amazon Arama Testi" name="TC02  Kullanici Amazonda Nutella aramasi yapar." time="18.417">
         <system-out>
             <![CDATA[Given Kullanici Amazon Anasayfasina Gider...................................passed
-When Arama Kutusuna Nutella Yazip Aratir....................................passed
-Then Arama Sonuclarinin Nutella icerdigini Test Eder........................passed
+Then Arama Kutusuna Nutella Yazip Aratir....................................passed
+And Arama Sonuclarinin Nutella icerdigini Test Eder.........................passed
+And Sayfayi Kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1003 Background Kullanarak Amazon Arama Testi" name="TC03 Kullanici Amazonda Java aramasi yapar" time="12.334">
+        <system-out>
+            <![CDATA[Given Kullanici Amazon Anasayfasina Gider...................................passed
+Then Arama Kutusuna Java Yazip Aratir.......................................passed
+And Arama Sonuclarinin Java icerdigini Test Eder............................passed
+And Sayfayi Kapatir.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1003 Background Kullanarak Amazon Arama Testi" name="TC04 Kullanici Amazonda Apple aramasi yapar" time="9.859">
+        <system-out>
+            <![CDATA[Given Kullanici Amazon Anasayfasina Gider...................................passed
+Then Arama Kutusuna Apple Yazip Aratir......................................passed
+And Arama Sonuclarinin Apple icerdigini Test Eder...........................passed
 And Sayfayi Kapatir.........................................................passed
 ]]>
         </system-out>
