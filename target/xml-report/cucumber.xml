@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="41.222">
-    <testcase classname="US1003 Background Kullanarak Amazon Arama Testi" name="TC02  Kullanici Amazonda Nutella aramasi yapar." time="18.417">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="35.979">
+    <testcase classname="US1005 Parametreli Configuration Properties Kullanimi" name="TC09 Kullanici Anasayfasina Gidebilmeli" time="13.464">
         <system-out>
-            <![CDATA[Given Kullanici Amazon Anasayfasina Gider...................................passed
-Then Arama Kutusuna Nutella Yazip Aratir....................................passed
-And Arama Sonuclarinin Nutella icerdigini Test Eder.........................passed
+            <![CDATA[Given Kullanici "amazonUrl" Anasayfasina Gider..............................passed
+Then Url'nin "amazon" icerdigini test eder..................................passed
 And Sayfayi Kapatir.........................................................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="US1003 Background Kullanarak Amazon Arama Testi" name="TC03 Kullanici Amazonda Java aramasi yapar" time="12.334">
+    <testcase classname="US1005 Parametreli Configuration Properties Kullanimi" name="TC10 Kullanici QualityDemy Anasayfasina Gidebilmeli" time="11.367">
         <system-out>
-            <![CDATA[Given Kullanici Amazon Anasayfasina Gider...................................passed
-Then Arama Kutusuna Java Yazip Aratir.......................................passed
-And Arama Sonuclarinin Java icerdigini Test Eder............................passed
+            <![CDATA[Given Kullanici "qualityDemyUrl" Anasayfasina Gider.........................passed
+Then Url'nin "qualitydemy" icerdigini test eder.............................passed
 And Sayfayi Kapatir.........................................................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="US1003 Background Kullanarak Amazon Arama Testi" name="TC04 Kullanici Amazonda Apple aramasi yapar" time="9.859">
+    <testcase classname="US1005 Parametreli Configuration Properties Kullanimi" name="TC10 Kullanici Wise Quarter Anasayfasina Gidebilmeli" time="10.56">
         <system-out>
-            <![CDATA[Given Kullanici Amazon Anasayfasina Gider...................................passed
-Then Arama Kutusuna Apple Yazip Aratir......................................passed
-And Arama Sonuclarinin Apple icerdigini Test Eder...........................passed
+            <![CDATA[Given Kullanici "wiseQuarterUrl" Anasayfasina Gider.........................passed
+Then Url'nin "wisequarter" icerdigini test eder.............................passed
 And Sayfayi Kapatir.........................................................passed
 ]]>
         </system-out>

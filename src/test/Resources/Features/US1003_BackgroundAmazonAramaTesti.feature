@@ -1,5 +1,4 @@
 
-@wip
 Feature: US1003 Background Kullanarak Amazon Arama Testi
 
   Background: Önce Amazon Anasayfaya Gider

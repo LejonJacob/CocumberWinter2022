@@ -70,4 +70,29 @@ public class AmazonStepDefinitions {
         Assert.assertTrue(actualAramaSonucu.contains(expectedkelime));
 
     }
+
+    @Then("Arama Kutusuna {string} Yazip Aratir")
+    public void aramaKutusunaYazipAratir(String istenenKelime) {
+        amazonPage.aramaKutusu.sendKeys(istenenKelime + Keys.ENTER);
+
+    }
+
+    @And("Arama Sonuclarinin {string} icerdigini Test Eder")
+    public void aramaSonuclarininIcerdiginiTestEder(String istenenKelime) {
+        String actualAramaSonucu=amazonPage.aramaSonucElementi.getText();
+        Assert.assertTrue(actualAramaSonucu.contains(istenenKelime));
+
+    }
+
+    @Given("Kullanici {string} Anasayfasina Gider")
+    public void kullaniciAnasayfasinaGider(String istenenUrl) {
+        Driver.getDriver().get(ConfigReader.getProperty(istenenUrl));
+    }
+
+    @Then("Url'nin {string} icerdigini test eder")
+    public void urlNinIcerdiginiTestEder(String istenenKelime) {
+        String actualUrl= Driver.getDriver().getCurrentUrl();
+        Assert.assertTrue(actualUrl.contains(istenenKelime));
+
+    }
 }
