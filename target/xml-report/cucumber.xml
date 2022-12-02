@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.891">
-    <testcase classname="US1008 Herokuapp Wait Testleri" name="TC16 Kullanici WaitIslemlerinin Calistigini Test Eder" time="0.12">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given Kullanici "herokuappUrl" Anasayfasina Gider...........................passed
-Then Herokuapp Add Element butonuna basar...................................undefined
-Then Herokuapp Delete butonunun görünmesini bekler..........................skipped
-And Herokuapp Delete butonunun görunür oldugunu test edilir.................skipped
-Then Herokuapp Delete butonuna basarak butonu siler.........................skipped
-And Herokuapp Delete butonunun görünmedigi test edilir......................skipped
-And Sayfayi Kapatir.........................................................skipped
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="21.162">
+    <testcase classname="US1011 Automation Practice Kullanici Olusturma Testi" name="TC18 Kullanici Anasayfada Yeni Kullanici Olusturabilmeli" time="20.68">
+        <system-out>
+            <![CDATA[Given Kullanici "automationExerciseURL" Anasayfasina Gider..................passed
+And User SignUp Linkine tiklar..............................................passed
+And New User Bölümüne Name ve Email adresi girer............................passed
+And SignUp Butonuna basar...................................................passed
+And User'a Ait Kisisel Bilgileri ve Iletisim Bilgilerini girer..............passed
+And User Create Account Butonuna basar......................................passed
+Then Hesabin Basariyla Olustugunu dogrulayin................................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
 </testsuite>

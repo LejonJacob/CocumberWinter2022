@@ -1,7 +1,7 @@
 Feature: US1008 Herokuapp Wait Testleri
 
-  @wip
-  Scenario: TC16 Kullanici WaitIslemlerinin Calistigini Test Eder
+
+  Scenario: TC16 Kullanici Wait Islemlerinin Calistigini Test Eder
 
       # https://the-internet.herokuapp.com/add_remove_elements/ adresine gidin
       # 1)“Add Element” butona basin
@@ -12,10 +12,10 @@ Feature: US1008 Herokuapp Wait Testleri
 
     Given Kullanici "herokuappUrl" Anasayfasina Gider
     Then Herokuapp Add Element butonuna basar
-    Then Herokuapp Delete butonunun görünmesini bekler
-    And Herokuapp Delete butonunun görunür oldugunu test edilir
+    Then Herokuapp Delete butonunun gorunmesini bekler
+    And Herokuapp Delete butonunun gorunur oldugunu test edilir
     Then Herokuapp Delete butonuna basarak butonu siler
-    And Herokuapp Delete butonunun görünmedigi test edilir
+    And Herokuapp Delete butonunun gorunmedigi test edilir
     And Sayfayi Kapatir
 
     # Yeni bir sayfada calismaya basladigimizda

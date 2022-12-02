@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         features = "src/test/Resources/Features",
         glue="StepDefinitions",
         tags= "@wip",
-        dryRun = true
+        dryRun = false
 )
 
 public class TestRunner {

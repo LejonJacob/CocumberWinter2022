@@ -13,7 +13,7 @@ public class HerokuappPage {
 
     }
 
-    @FindBy(xpath = "//*[text()=\"Add Element\"]")
+    @FindBy(xpath = "//button[text()=\"Add Element\"]")
     public WebElement addButton;
 
     @FindBy(xpath = "//button[text()=\"Delete\"]")

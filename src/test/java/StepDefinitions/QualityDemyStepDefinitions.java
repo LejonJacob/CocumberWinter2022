@@ -16,8 +16,9 @@ public class QualityDemyStepDefinitions {
         qualityDemyPage.loginLink.click();
 
     }
-    @Then("Ana Sayfada Cikan Cookies'leri Kabul eder")
-    public void anaSayfadaCikanCookiesLeriKabulEder() {
+
+    @Then("Quality Demy Anasayfasinda Cikan Cookies'leri Kabul eder")
+    public void qualityDemyAnasayfasindaCikanCookiesLeriKabulEder() {
         ReusableMethods.waitForVisibility(qualityDemyPage.cookies, 2);
         qualityDemyPage.cookies.click();
         ReusableMethods.waitForVisibility(qualityDemyPage.loginLink, 1);
@@ -47,4 +48,6 @@ public class QualityDemyStepDefinitions {
     public void qualityDemySayfasinaGirisYapilamadiginiTestEder() {
         Assert.assertTrue(qualityDemyPage.loginLink.isDisplayed());
     }
+
+
 }

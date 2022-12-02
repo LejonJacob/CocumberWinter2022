@@ -11,21 +11,19 @@ public class HerokuappStepDefinition {
 
     @Then("Herokuapp Add Element butonuna basar")
     public void herokuapp_add_element_butonuna_basar() {
-
         herokuappPage.addButton.click();
     }
 
-    @Then("Herokuapp Delete butonunun görünmesini bekler")
-    public void herokuapp_delete_butonunun_görünmesini_bekler() {
-
+    @Then("Herokuapp Delete butonunun gorunmesini bekler")
+    public void herokuapp_delete_butonunun_gorunmesini_bekler() {
         // Delete butonu 15 saniyelik implicitlyWait suresi icerisinde gorundugunden
         // Buraya ekstra explicit wait olusturmaya gerek yok
         // Illa da bekleyelim isteniyorsa
         ReusableMethods.waitForVisibility(herokuappPage.deleteButton, 2);
     }
 
-    @Then("Herokuapp Delete butonunun görunür oldugunu test edilir")
-    public void herokuapp_delete_butonunun_görunür_oldugunu_test_edilir() {
+    @Then("Herokuapp Delete butonunun gorunur oldugunu test edilir")
+    public void herokuapp_delete_butonunun_gorunur_oldugunu_test_edilir() {
 
         Assert.assertTrue(herokuappPage.deleteButton.isDisplayed());
     }
@@ -36,8 +34,8 @@ public class HerokuappStepDefinition {
         herokuappPage.deleteButton.click();
     }
 
-    @Then("Herokuapp Delete butonunun görünmedigi test edilir")
-    public void herokuapp_delete_butonunun_görünmedigi_test_edilir() {
+    @Then("Herokuapp Delete butonunun gorunmedigi test edilir")
+    public void herokuapp_delete_butonunun_gorunmedigi_test_edilir() {
 
         boolean flag=false;
         try {
@@ -48,7 +46,8 @@ public class HerokuappStepDefinition {
         }
 
         Assert.assertTrue(flag);
-    }
 
+
+    }
 
 }
