@@ -1,4 +1,4 @@
-@wip
+
 Feature: US1007 Yanlis Kullanici ve Password ile Negatif Login Yapma Testi
 
   Scenario: TC13 Yanlis Email, Dogru Password ile Giris Yapilamamali

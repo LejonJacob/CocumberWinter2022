@@ -1,42 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="35.363">
-    <testcase classname="US1007 Yanlis Kullanici ve Password ile Negatif Login Yapma Testi" name="TC13 Yanlis Email, Dogru Password ile Giris Yapilamamali" time="13.948">
-        <system-out>
-            <![CDATA[Given Kullanici "qualityDemyUrl" Anasayfasina Gider.........................passed
-Then Ana Sayfada Cikan Cookies'leri Kabul eder..............................passed
-Then Kullanici Quality Demy anasayfasinda login linkine tiklar..............passed
-Then Quality Demy Kullanici adi olarak "qualityDemyYanlisMail" girer........passed
-And Quality Demy Password olarak "userGecerliPassword1" girer...............passed
-Then Quality Demy Login butonuna basar......................................passed
-Then Quality Demy Sayfasina Giris yapilamadigini test eder..................passed
-And Sayfayi Kapatir.........................................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.891">
+    <testcase classname="US1008 Herokuapp Wait Testleri" name="TC16 Kullanici WaitIslemlerinin Calistigini Test Eder" time="0.12">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given Kullanici "herokuappUrl" Anasayfasina Gider...........................passed
+Then Herokuapp Add Element butonuna basar...................................undefined
+Then Herokuapp Delete butonunun görünmesini bekler..........................skipped
+And Herokuapp Delete butonunun görunür oldugunu test edilir.................skipped
+Then Herokuapp Delete butonuna basarak butonu siler.........................skipped
+And Herokuapp Delete butonunun görünmedigi test edilir......................skipped
+And Sayfayi Kapatir.........................................................skipped
 ]]>
-        </system-out>
-    </testcase>
-    <testcase classname="US1007 Yanlis Kullanici ve Password ile Negatif Login Yapma Testi" name="TC14 Dogru Email, Yanlis Password ile Giris Yapilamamali" time="11.381">
-        <system-out>
-            <![CDATA[Given Kullanici "qualityDemyUrl" Anasayfasina Gider.........................passed
-Then Ana Sayfada Cikan Cookies'leri Kabul eder..............................passed
-Then Kullanici Quality Demy anasayfasinda login linkine tiklar..............passed
-Then Quality Demy Kullanici adi olarak "userGecerliEmail1" girer............passed
-And Quality Demy Password olarak "qualityDemyYanlisPassword" girer..........passed
-Then Quality Demy Login butonuna basar......................................passed
-Then Quality Demy Sayfasina Giris yapilamadigini test eder..................passed
-And Sayfayi Kapatir.........................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="US1007 Yanlis Kullanici ve Password ile Negatif Login Yapma Testi" name="TC15 Yanlis Email, Yanlis Password ile Giris Yapilamamali" time="9.471">
-        <system-out>
-            <![CDATA[Given Kullanici "qualityDemyUrl" Anasayfasina Gider.........................passed
-Then Ana Sayfada Cikan Cookies'leri Kabul eder..............................passed
-Then Kullanici Quality Demy anasayfasinda login linkine tiklar..............passed
-Then Quality Demy Kullanici adi olarak "qualityDemyYanlisMail" girer........passed
-And Quality Demy Password olarak "qualityDemyYanlisPassword" girer..........passed
-Then Quality Demy Login butonuna basar......................................passed
-Then Quality Demy Sayfasina Giris yapilamadigini test eder..................passed
-And Sayfayi Kapatir.........................................................passed
-]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>
