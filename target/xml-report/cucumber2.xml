@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="34.451">
-    <testcase classname="US1004 Parametre Kullanma" name="TC08 Kullanici, Parametre ile verilen kelimeyi Amazonda aratabilmelidir" time="33.885">
-        <system-out><![CDATA[Given Kullanici Amazon Anasayfasina Gider...................................passed
-Then Arama Kutusuna "Nutella" Yazip Aratir..................................passed
-And Arama Sonuclarinin "Nutella" icerdigini Test Eder.......................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="32.33">
+    <testcase classname="US1006 Dogru Kullanici ve Password ile Pozitif Login Testi" name="TC12 Kullanici Quality Demy sitesine Login yapabilmeli" time="31.726">
+        <system-out><![CDATA[Given Kullanici "qualityDemyUrl" Anasayfasina Gider.........................passed
+Then Quality Demy Anasayfasinda Cikan Cookies'leri Kabul eder...............passed
+Then Kullanici Quality Demy anasayfasinda login linkine tiklar..............passed
+Then Quality Demy Kullanici adi olarak "userGecerliEmail1" girer............passed
+And Quality Demy Password olarak "userGecerliPassword1" girer...............passed
+Then Quality Demy Login butonuna basar......................................passed
+Then Quality Demy sayfasina basarili giris yapabildigini test eder..........passed
 And Sayfayi Kapatir.........................................................passed
 ]]></system-out>
     </testcase>
