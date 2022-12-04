@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="21.162">
-    <testcase classname="US1011 Automation Practice Kullanici Olusturma Testi" name="TC18 Kullanici Anasayfada Yeni Kullanici Olusturabilmeli" time="20.68">
-        <system-out>
-            <![CDATA[Given Kullanici "automationExerciseURL" Anasayfasina Gider..................passed
-And User SignUp Linkine tiklar..............................................passed
-And New User Bölümüne Name ve Email adresi girer............................passed
-And SignUp Butonuna basar...................................................passed
-And User'a Ait Kisisel Bilgileri ve Iletisim Bilgilerini girer..............passed
-And User Create Account Butonuna basar......................................passed
-Then Hesabin Basariyla Olustugunu dogrulayin................................passed
-]]>
-        </system-out>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="34.049">
+    <testcase classname="US1001 Amazon Arama Testi" name="TC01 Kullanici Amazonda Arama Yapabilmeli" time="33.472">
+        <system-out><![CDATA[Given Kullanici Amazon Anasayfasina Gider...................................passed
+When Arama Kutusuna Nutella Yazip Aratir....................................passed
+Then Arama Sonuclarinin Nutella icerdigini Test Eder........................passed
+And Sayfayi Kapatir.........................................................passed
+]]></system-out>
     </testcase>
 </testsuite>

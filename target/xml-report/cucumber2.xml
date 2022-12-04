@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="34.451">
+    <testcase classname="US1004 Parametre Kullanma" name="TC08 Kullanici, Parametre ile verilen kelimeyi Amazonda aratabilmelidir" time="33.885">
+        <system-out><![CDATA[Given Kullanici Amazon Anasayfasina Gider...................................passed
+Then Arama Kutusuna "Nutella" Yazip Aratir..................................passed
+And Arama Sonuclarinin "Nutella" icerdigini Test Eder.......................passed
+And Sayfayi Kapatir.........................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>

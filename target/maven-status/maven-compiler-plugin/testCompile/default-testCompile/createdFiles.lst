@@ -1,0 +1,16 @@
+StepDefinitions\QualityDemyStepDefinitions.class
+Pages\HerokuappPage.class
+Pages\AmazonPage.class
+Runners\TestRunner2.class
+Utilities\Driver.class
+Utilities\ReusableMethods.class
+StepDefinitions\AmazonStepDefinitions.class
+Utilities\ReusableMethods$2.class
+Runners\TestRunner.class
+Pages\QualityDemyPage.class
+Utilities\ReusableMethods$1.class
+StepDefinitions\HerokuappStepDefinition.class
+StepDefinitions\Hooks.class
+Utilities\ConfigReader.class
+Pages\AutomationExercisePage.class
+StepDefinitions\AutomationExerciseStepDefinitions.class
