@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="3.604">
+    <testcase classname="JDBC Kullanarak Yeterli Bilgi ile Database Testi Yapilabilir" name="JDBC01 Kullanici Database'de Sorgu Yapabilmeli" time="3.192">
+        <system-out>
+            <![CDATA[Given Kullanici JDBC ile Database'e Baglanir................................passed
+Then Users Tablosundaki isim Verilerini Alir................................passed
+And isim Verilerini Test Eder...............................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
