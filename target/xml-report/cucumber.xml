@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="33.076">
-    <testcase classname="US1001 Amazon Arama Testi" name="TC01 Kullanici Amazonda Arama Yapabilmeli" time="32.513">
-        <system-out><![CDATA[Given Kullanici Amazon Anasayfasina Gider...................................passed
-When Arama Kutusuna Nutella Yazip Aratir....................................passed
-Then Arama Sonuclarinin Nutella icerdigini Test Eder........................passed
-And Sayfayi Kapatir.........................................................passed
-]]></system-out>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.759">
+    <testcase classname="US_034 As an administrator, I want the Product List page to be able to access the product lists on the site." name="TC_3401 Verify that the Product List page is accessible from the Products menu." time="0.133">
+        <system-out>
+            <![CDATA[Given Go to "myUrl" page....................................................passed
+Then Enter a valid "Email" address and "Password" in the relevant fields on the page that opens, then click the SIGN IN button..passed
+Then Then a message about successful login should appear in a green box in the upper right corner of the screen..passed
+Then The Products Title should be clickable under the PRODUCT MANAGE title on the left side of the screen on the Dashboard page..passed
+Then Click on the link button titled Product Lists from the options listed under the Products Title..passed
+Then Then, it is checked that the Products page is opened and the Product List window visible on the screen..passed
+]]>
+        </system-out>
     </testcase>
 </testsuite>

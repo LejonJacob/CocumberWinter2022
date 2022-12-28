@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
 
         features = "src/test/Resources/Features",
         glue="StepDefinitions",
-        tags= "@wip",
+        tags= "@hej",
         dryRun = false
 )
 
@@ -32,10 +32,10 @@ public class TestRunner {
         tags : o an hangi tag'i calistirmak istiyorsak onu belli eder
 
         dryRun : iki secenek var
-        dryRun = true; yazdigimizda Testimizi calistirmadan sadece eksik adimlari bize verir
-                 eksik adim yoksa, testi calistirmadan testi yazar geçti
+            dryRun = true; yazdigimizda Testimizi calistirmadan sadece eksik adimlari bize verir
+                 eksik adim yoksa, testi calistirmadan testi yazar geçer.
 
-        dryRun = false yazdigimizda testlerimizi calistirir
+            dryRun = false yazdigimizda testlerimizi calistirir
                  eksik adim varsa, ilk eksik adimda calismayi durdurur ve
                  eksik adimlari bize verir
 
