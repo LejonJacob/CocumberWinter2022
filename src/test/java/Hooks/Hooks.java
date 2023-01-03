@@ -1,4 +1,4 @@
-package StepDefinitions;
+package Hooks;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;

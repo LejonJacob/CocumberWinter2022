@@ -12,9 +12,9 @@ import org.junit.runner.RunWith;
         },
 
         features = "src/test/Resources/Features",
-        glue="StepDefinitions",
+        glue={"StepDefinitions", "Hooks"},
         tags= "@hej",
-        dryRun = false
+        dryRun = true
 )
 
 public class TestRunner {
