@@ -97,7 +97,7 @@ Feature: US_034 As an administrator, I want the Product List page to be able to 
     Then Click on the Clone button link and check that the page that opens is the Clone Product page.
 
 
-  @hej
+
   Scenario: TC_3413 Verify that Product Information, Price Info And Stock, Weight Height Info, Product Image Info, Pdf Specifications, Product Video Info, Others Info information is changeable on Clone Product page
     Then Click on any Select button opposite the products under the Action heading column.
     Then Click the Clone Link button.
@@ -123,7 +123,7 @@ Feature: US_034 As an administrator, I want the Product List page to be able to 
     And Then click the Save button at the bottom of the page and check that the information has been successfully saved.
 
 
-  @hej
+
   Scenario: TC_3414 On the Save button, it should be verified that the message reminding that the information on the Related Product, Up Sale, Cross Sale pages must be filled before registration is visible.
     Then Click on any Select button opposite the products under the Action heading column.
     Then Click the Clone Link button.
@@ -131,3 +131,30 @@ Feature: US_034 As an administrator, I want the Product List page to be able to 
     Then Click on the RELATED PRODUCT tab, verify that the Related Product window appears at the end of the page reminding you to fill in the information before recording.
     Then Click on the UP SALE tab, verify that the Up Sale window appears at the end of the page, reminding that the information must be filled before registration.
     Then Click on the CROSS SALE tab, verify that the Cross sale window appears at the end of the page, reminding that the information must be filled before registration.
+
+
+
+  Scenario: TC_3415 After updating the information on the General Information, Related Product, Up Sale, Cross Sale pages, verify that the updated information is saved with the Save button.
+    Then Click on any Select button opposite the products under the Action heading column.
+    Then Click on the Edit link button.
+    Then GENERAL INFORMATION, RELATED PRODUCT While any of the , UP SALE or CROSS SALE window tabs are selected click the Save button at the end of the page.
+    Then Verify that the about saved the product has been successfully message appears on the screen.
+
+  @hej
+  Scenario: TC_3416 It should be verified that the Delete link is visible on the select tab in the Action column in the Product List and that the Delete operation can be performed when clicked.
+    Then Click on any Select button opposite the products under the Action heading column for Delete.
+    Then In the mini pop-up tab that opens it is checked whether the Delete button link is visible.
+    Then Click the Delete and then click the Delete button in the mini alert window that will appear.
+    Then Check that a green pop-up message appears in the upper right corner of the screen stating that the product has been Deleted Successfully.
+
+
+
+  Scenario: TC_3417 In the Product By SKU List, verify that the products are listed under the headings SL, Name, Brand, SKU, Selling Price, Image, Action.
+
+    Then Click the Product By SKU tab button that appears on the screen.
+    Then Verify that the products are listed and appearing under the headings SL, Name, Brand, SKU, Selling Price, Image, Action in the tab that appears.
+
+
+
+
+

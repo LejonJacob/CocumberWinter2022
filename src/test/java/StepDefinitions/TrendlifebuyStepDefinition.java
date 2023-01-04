@@ -531,7 +531,7 @@ public class TrendlifebuyStepDefinition {
         actions.moveToElement(trendlifebuyPage.crossSaleQuickSearchResultTickAllProducts);
         actions.click(trendlifebuyPage.crossSaleQuickSearchResultTickAllProducts).perform();
 
-        trendlifebuyPage.editProductUpdateButton.click();
+        trendlifebuyPage.editAndCloneProductUpdateAndSaveButton.click();
     }
     @Then("Check that the message that the edited information has been successfully saved appears on the screen.")
     public void check_that_the_message_that_the_edited_information_has_been_successfully_saved_appears_on_the_screen() {
@@ -780,6 +780,8 @@ public class TrendlifebuyStepDefinition {
         actions.moveToElement(trendlifebuyPage.productWeightHeightInfoStockManageYES);
         actions.click(trendlifebuyPage.productWeightHeightInfoStockManageYES).perform();
 
+        trendlifebuyPage.productWeightHeightInfoProductStockTextBox.clear(); trendlifebuyPage.productWeightHeightInfoProductStockTextBox.sendKeys("999");
+
         trendlifebuyPage.productWeightHeightInfoSellingPrice.clear(); trendlifebuyPage.productWeightHeightInfoSellingPrice.sendKeys("25");
         trendlifebuyPage.productWeightHeightInfoDiscount.clear(); trendlifebuyPage.productWeightHeightInfoDiscount.sendKeys("0");
 
@@ -813,7 +815,7 @@ public class TrendlifebuyStepDefinition {
     @Then("Then click the Save button at the bottom of the page and check that the information has been successfully saved.")
     public void then_click_the_save_button_at_the_bottom_of_the_page_and_check_that_the_information_has_been_successfully_saved() {
 
-        trendlifebuyPage.cloneProductSaveButton.click();
+        trendlifebuyPage.editAndCloneProductUpdateAndSaveButton.click();
         assertTrue("The Clone Product Update Success Message does not appear on the screen",
                 trendlifebuyPage.editAndCloneProductUpdateSuccessMessage.isDisplayed());
 
@@ -824,7 +826,130 @@ public class TrendlifebuyStepDefinition {
 //********************************************  SCENARIO TC_3414  ****************************************************//
 
 
+    @Then("With the GENERAL INFORMATION window tab selected, verify that the message reminding that the information must be filled before recording is displayed at the end of the page.")
+    public void with_the_general_information_window_tab_selected_verify_that_the_message_reminding_that_the_information_must_be_filled_before_recording_is_displayed_at_the_end_of_the_page() {
+
+        javaScript.executeScript("arguments[0].scrollIntoView();", trendlifebuyPage.cloneProductUnderPageAlertWarningMessage);
+        ReusableMethods.waitForVisibility(trendlifebuyPage.cloneProductUnderPageAlertWarningMessage, 3);
+        assertTrue("At the end of the GENERAL INFORMATION tab window, the message reminding that the information must be filled before registration does not appear."
+                ,trendlifebuyPage.cloneProductUnderPageAlertWarningMessage.isDisplayed());
+
+    }
+    @Then("Click on the RELATED PRODUCT tab, verify that the Related Product window appears at the end of the page reminding you to fill in the information before recording.")
+    public void click_on_the_related_product_tab_verify_that_the_related_product_window_appears_at_the_end_of_the_page_reminding_you_to_fill_in_the_information_before_recording() {
+
+        trendlifebuyPage.editProductRelatedProductTabButton.click();
+        javaScript.executeScript("arguments[0].scrollIntoView();", trendlifebuyPage.cloneProductUnderPageAlertWarningMessage);
+        assertTrue("At the end of the Related Product tab window, the message reminding that the information must be filled before registration does not appear."
+                ,trendlifebuyPage.cloneProductUnderPageAlertWarningMessage.isDisplayed());
+    }
+    @Then("Click on the UP SALE tab, verify that the Up Sale window appears at the end of the page, reminding that the information must be filled before registration.")
+    public void click_on_the_up_sale_tab_verify_that_the_up_sale_window_appears_at_the_end_of_the_page_reminding_that_the_information_must_be_filled_before_registration() {
+
+        trendlifebuyPage.editProductUpSaleTabButton.click();
+        javaScript.executeScript("arguments[0].scrollIntoView();", trendlifebuyPage.cloneProductUnderPageAlertWarningMessage);
+        assertTrue("At the end of the UP SALE tab window, the message reminding that the information must be filled before registration does not appear."
+                ,trendlifebuyPage.cloneProductUnderPageAlertWarningMessage.isDisplayed());
+    }
+    @Then("Click on the CROSS SALE tab, verify that the Cross sale window appears at the end of the page, reminding that the information must be filled before registration.")
+    public void click_on_the_cross_sale_tab_verify_that_the_cross_sale_window_appears_at_the_end_of_the_page_reminding_that_the_information_must_be_filled_before_registration() {
+
+        trendlifebuyPage.editProductCrossSaleTabButton.click();
+        javaScript.executeScript("arguments[0].scrollIntoView();", trendlifebuyPage.cloneProductUnderPageAlertWarningMessage);
+        assertTrue("At the end of the CROSS SALE tab window, the message reminding that the information must be filled before registration does not appear."
+                ,trendlifebuyPage.cloneProductUnderPageAlertWarningMessage.isDisplayed());
+
+    }
+
+
 //********************************************  SCENARIO TC_3415  ****************************************************//
+
+    @Then("GENERAL INFORMATION, RELATED PRODUCT While any of the , UP SALE or CROSS SALE window tabs are selected click the Save button at the end of the page.")
+    public void general_information_related_product_while_any_of_the_up_sale_or_cross_sale_window_tabs_are_selected_click_the_save_button_at_the_end_of_the_page() {
+
+        trendlifebuyPage.editProductRelatedProductTabButton.click();
+
+        trendlifebuyPage.editProductGeneralInformationTabButton.click();
+
+        trendlifebuyPage.editProductUpSaleTabButton.click();
+
+        trendlifebuyPage.editProductCrossSaleTabButton.click();
+
+        javaScript.executeScript("arguments[0].scrollIntoView();", trendlifebuyPage.editAndCloneProductUpdateAndSaveButton);
+
+        trendlifebuyPage.editAndCloneProductUpdateAndSaveButton.click();
+
+    }
+    @Then("Verify that the about saved the product has been successfully message appears on the screen.")
+    public void verify_that_the_about_saved_the_product_has_been_successfully_message_appears_on_the_screen() {
+
+        ReusableMethods.waitForVisibility(trendlifebuyPage.editAndCloneProductUpdateSuccessMessage,3);
+        assertTrue("The Clone Product Update Success Message does not appear on the screen",
+                trendlifebuyPage.editAndCloneProductUpdateSuccessMessage.isDisplayed());
+
+    }
+
+
+//********************************************  SCENARIO TC_3416  ****************************************************//
+
+    @Then("Click on any Select button opposite the products under the Action heading column for Delete.")
+    public void click_on_any_select_button_opposite_the_products_under_the_action_heading_column_for_delete() {
+
+        trendlifebuyPage.productListQuickSearchBox.sendKeys("OzVittoria");
+        ReusableMethods.bekle(2);
+
+        if (!trendlifebuyPage.productListQuickSearchBoxProductTwoSelect.isDisplayed()) {
+
+            assertFalse("The Product Select button does visible on the screen",
+                    trendlifebuyPage.productListQuickSearchBoxProductTwoSelect.isDisplayed());
+
+            trendlifebuyPage.plusQuickSearchActionSelectButton2.click();
+
+            actions.moveToElement(trendlifebuyPage.productListQuickSearchBoxProductTwoSelectPlus);
+            actions.click(trendlifebuyPage.productListQuickSearchBoxProductTwoSelectPlus).perform();
+
+
+        } else {
+
+            assertTrue("The Product Select button does not visible on the screen",
+                    trendlifebuyPage.productListQuickSearchBoxProductTwoSelect.isDisplayed());
+
+            trendlifebuyPage.productListQuickSearchBoxProductTwoSelect.click();
+        }
+
+        ReusableMethods.bekle(1);
+
+
+    }
+
+    @Then("In the mini pop-up tab that opens it is checked whether the Delete button link is visible.")
+    public void in_the_mini_pop_up_tab_that_opens_it_is_checked_whether_the_delete_button_link_is_visible() {
+
+        assertTrue("The Product Select Delete link button does not visible on the screen",
+                trendlifebuyPage.productListQuickSearchBoxProductTwoDeleteLinkBut.isDisplayed());
+
+    }
+    @Then("Click the Delete and then click the Delete button in the mini alert window that will appear.")
+    public void click_the_delete_and_then_click_the_delete_button_in_the_mini_alert_window_that_will_appear() {
+
+        trendlifebuyPage.productListQuickSearchBoxProductTwoDeleteLinkBut.click();
+
+        ReusableMethods.waitForVisibility(trendlifebuyPage.productListAlertDeleteButton, 2);
+        trendlifebuyPage.productListAlertDeleteButton.click();
+    }
+    @Then("Check that a green pop-up message appears in the upper right corner of the screen stating that the product has been Deleted Successfully.")
+    public void check_that_a_green_pop_up_message_appears_in_the_upper_right_corner_of_the_screen_stating_that_the_product_has_been_deleted_successfully() {
+
+        ReusableMethods.waitForVisibility(trendlifebuyPage.productListDeleteProductSuccessMessage, 4);
+        assertTrue("The Product Delete Successful Message does not appear on the screen", trendlifebuyPage.productListDeleteProductSuccessMessage.isDisplayed());
+
+    }
+
+
+//********************************************  SCENARIO TC_3417  ****************************************************//
+
+
+//********************************************  SCENARIO TC_3418  ****************************************************//
 
 
 }

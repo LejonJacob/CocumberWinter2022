@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         features = "src/test/Resources/Features",
         glue={"StepDefinitions", "Hooks"},
         tags= "@hej",
-        dryRun = true
+        dryRun = false
 )
 
 public class TestRunner {
@@ -24,7 +24,7 @@ public class TestRunner {
         Bir framework'de bir tek Runner class'i yeterli olabilir
         Runner class'inda class body'sinde hic bir sey olmaz
         Runner class'imizi onemli yapan 2 adet annotaion vardir
-        @RunWith(Cucumber.class) notasyonu Runner class'ina calisma ozelligi katar
+        @RunWith(Cucumber.class) notasyonu Runner class'ina calisma özelligi katar
         Bu notasyon oldugu icin Cucumber framework'umuzde JUnit kullanmayi tercih ediyoruz
 
         features : Runner dosyasinin feature dosyalarini nereden bulacagini tarif eder

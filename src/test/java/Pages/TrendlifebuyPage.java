@@ -152,9 +152,6 @@ public class TrendlifebuyPage {
     @FindBy(xpath = "//input[@id='variant_prod']")
     public WebElement editProductVariantCheckBoxButton;
 
-    @FindBy(xpath = "//button[@class='primary_btn_2 mt-5 text-center saveBtn']")
-    public WebElement editProductUpdateButton;
-
     @FindBy(xpath = "//div[@class='toast-title']")
     public WebElement editAndCloneProductUpdateSuccessMessage;
 
@@ -317,6 +314,9 @@ public class TrendlifebuyPage {
     @FindBy(xpath = "//li[.='Yes']")
     public WebElement productWeightHeightInfoStockManageYES;
 
+    @FindBy(xpath = "//input[@id='single_stock']")
+    public WebElement productWeightHeightInfoProductStockTextBox;
+
     @FindBy(xpath = "//div[.='AmountAmountPercentage']")
     public WebElement productWeightHeightInfoDiscountType;
 
@@ -342,7 +342,31 @@ public class TrendlifebuyPage {
     public WebElement productSEOInfoMetaDescriptionTextBox;
 
     @FindBy(xpath = "//button[@class='primary_btn_2 mt-5 text-center saveBtn']")
-    public WebElement cloneProductSaveButton;
+    public WebElement editAndCloneProductUpdateAndSaveButton;
+
+    @FindBy(xpath = "//div[@class='alert alert-warning mt-30 text-center']")
+    public WebElement cloneProductUnderPageAlertWarningMessage;
+
+    @FindBy(xpath = "//div[@id='mainProductTable_filter']//input[1]")
+    public WebElement productListQuickSearchBox;
+
+    @FindBy(xpath = "//table[@id='mainProductTable']//tr[2]//button[@class='btn btn-secondary dropdown-toggle']")
+    public WebElement productListQuickSearchBoxProductTwoSelect;
+
+    @FindBy(xpath = "//table[@id='mainProductTable']//td[.='2']")
+    public WebElement plusQuickSearchActionSelectButton2;
+
+    @FindBy(xpath = "//span[@class='dtr-data']//button[@class='btn btn-secondary dropdown-toggle']")
+    public WebElement productListQuickSearchBoxProductTwoSelectPlus;
+
+    @FindBy(xpath = "//div[@class='dropdown-menu dropdown-menu-right show']/a[.='Delete']")
+    public WebElement productListQuickSearchBoxProductTwoDeleteLinkBut;
+
+    @FindBy(xpath = "//form[@id='product_delete_form']/input[@id='dataDeleteBtn']")
+    public WebElement productListAlertDeleteButton;
+
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement productListDeleteProductSuccessMessage;
 
 
 
