@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="27.734">
-    <testcase classname="US_034 As an administrator, I want the Product List page to be able to access the product lists on the site." name="TC_3416 It should be verified that the Delete link is visible on the select tab in the Action column in the Product List and that the Delete operation can be performed when clicked." time="26.872">
-        <system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.216">
+    <testcase classname="US_046 As an administrator, I want the Top Selling Item page to be able to see the list of the most sold products on the site." name="TC_04601 It should be verified that the Top Selling Item list can be accessed from the Top Selling Item link." time="0.1">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given Go to "myUrl" page....................................................passed
 Then Enter a valid "Email" address and "Password" in the relevant fields on the page that opens, then click the SIGN IN button..passed
 Then Then a message about successful login should appear in a green box in the upper right corner of the screen..passed
-Then The Products Title should be clickable under the PRODUCT MANAGE title on the left side of the screen on the Dashboard page..passed
-Then Click on the link button titled Product Lists from the options listed under the Products Title..passed
-Then Click on any Select button opposite the products under the Action heading column for Delete..passed
-Then In the mini pop-up tab that opens it is checked whether the Delete button link is visible..passed
-Then Click the Delete and then click the Delete button in the mini alert window that will appear..passed
-Then Check that a green pop-up message appears in the upper right corner of the screen stating that the product has been Deleted Successfully..passed
+Then The Admin Reports Title should be clickable under the CONTENT title on the left side of the screen on the Dashboard page..undefined
+Then Click on the link button titled Top Selling Item from the options listed under the Admin Reports Title..skipped
+Then Then, it is checked that the Admin Reports page is opened and the Top Selling Item window visible on the screen..skipped
+Then Then it is checked that the products are listed in the Best Selling Products window..skipped
 ]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>

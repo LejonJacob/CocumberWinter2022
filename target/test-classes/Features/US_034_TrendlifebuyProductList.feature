@@ -140,7 +140,7 @@ Feature: US_034 As an administrator, I want the Product List page to be able to 
     Then GENERAL INFORMATION, RELATED PRODUCT While any of the , UP SALE or CROSS SALE window tabs are selected click the Save button at the end of the page.
     Then Verify that the about saved the product has been successfully message appears on the screen.
 
-  @hej
+
   Scenario: TC_3416 It should be verified that the Delete link is visible on the select tab in the Action column in the Product List and that the Delete operation can be performed when clicked.
     Then Click on any Select button opposite the products under the Action heading column for Delete.
     Then In the mini pop-up tab that opens it is checked whether the Delete button link is visible.
@@ -149,7 +149,21 @@ Feature: US_034 As an administrator, I want the Product List page to be able to 
 
 
 
-  Scenario: TC_3417
+  Scenario: TC_3417 In the Product By SKU List, verify that the products are listed under the headings SL, Name, Brand, SKU, Selling Price, Image, Action.
 
+    Then Click the Product By SKU tab button that appears on the screen.
+    Then Verify that the products are listed and appearing under the headings SL, Name, Brand, SKU, Selling Price, Image, Action in the tab that appears.
+
+
+  @hej
+  Scenario: TC_3418 It should be verified that filtering can be done on the List through Product By SKU titles.
+    Then Click the Product By SKU tab button that appears on the screen.
+    Then Click on the NAME filtering header in the tab that opens and verify that the ordering has changed.
+    Then Click on the SL filtering header in the tab that opens and verify that the ordering has changed.
+    Then Click on the BRAND filtering header in the tab that opens and verify that the ordering has changed.
+    Then Click on the SKU filtering header in the tab that opens and verify that the ordering has changed.
+    Then Click on the SELLING PRICE filtering header in the tab that opens and verify that the ordering has changed.
+    Then Click on the IMAGE filtering header in the tab that opens and verify that the ordering has changed.
+    Then Click on the ACTION filtering header in the tab that opens and verify that the ordering has changed.
 
 

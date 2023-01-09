@@ -948,8 +948,415 @@ public class TrendlifebuyStepDefinition {
 
 //********************************************  SCENARIO TC_3417  ****************************************************//
 
+    @Then("Click the Product By SKU tab button that appears on the screen.")
+    public void click_the_product_by_sku_tab_button_that_appears_on_the_screen() {
+
+        trendlifebuyPage.productBySKUListTabButton.click();
+        ReusableMethods.waitForVisibility(trendlifebuyPage.productBySKUWindow, 2);
+
+
+    }
+    @Then("Verify that the products are listed and appearing under the headings SL, Name, Brand, SKU, Selling Price, Image, Action in the tab that appears.")
+    public void verify_that_the_products_are_listed_and_appearing_under_the_headings_sl_name_brand_sku_selling_price_image_action_in_the_tab_that_appears() {
+
+        List<WebElement> productTitleElementListi = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']//th"));
+
+        for (WebElement eachElement : productTitleElementListi) {
+
+            System.out.print(eachElement.getText() + "    ");
+
+        }
+
+        System.out.println("");
+
+
+        List<WebElement> productsDataElementList = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementList) {
+
+            System.out.println(eachElement2.getText());
+        }
+
+
+        assertTrue("The table title SL in the Product List tab window does not appear on the screen.", productTitleElementListi.get(0).isDisplayed());
+        assertTrue("The table title NAME in the Product List tab window does not appear on the screen.", productTitleElementListi.get(1).isDisplayed());
+        assertTrue("The table title PRODUCT TYPE in the Product List tab window does not appear on the screen.", productTitleElementListi.get(2).isDisplayed());
+        assertTrue("The table title BRAND in the Product List tab window does not appear on the screen.", productTitleElementListi.get(3).isDisplayed());
+        assertTrue("The table title IMAGE in the Product List tab window does not appear on the screen.", productTitleElementListi.get(4).isDisplayed());
+        assertTrue("The table title STOCK in the Product List tab window does not appear on the screen.", productTitleElementListi.get(5).isDisplayed());
+        //assertTrue("The table title ACTION in the Product List tab window does not appear on the screen.", productTitleElementListi.get(6).isDisplayed());
+
+        javaScript.executeScript("arguments[0].scrollIntoView();", productsDataElementList.get(8));
+
+        assertTrue("The 1th PRODUCT TABLE DATA in the Product List tab window does not appear on the screen.", productsDataElementList.get(0).isDisplayed());
+        assertTrue("The 2nd PRODUCT TABLE DATA in the Product List tab window does not appear on the screen.", productsDataElementList.get(1).isDisplayed());
+        assertTrue("The 3th PRODUCT TABLE DATA in the Product List tab window does not appear on the screen.", productsDataElementList.get(2).isDisplayed());
+        assertTrue("The 4th PRODUCT TABLE DATA in the Product List tab window does not appear on the screen.", productsDataElementList.get(3).isDisplayed());
+        assertTrue("The 5th PRODUCT TABLE DATA in the Product List tab window does not appear on the screen.", productsDataElementList.get(4).isDisplayed());
+        assertTrue("The 6th PRODUCT TABLE DATA in the Product List tab window does not appear on the screen.", productsDataElementList.get(5).isDisplayed());
+        assertTrue("The 7th PRODUCT TABLE DATA in the Product List tab window does not appear on the screen.", productsDataElementList.get(6).isDisplayed());
+        assertTrue("The 8th PRODUCT TABLE DATA in the Product List tab window does not appear on the screen.", productsDataElementList.get(7).isDisplayed());
+        assertTrue("The 9th PRODUCT TABLE DATA in the Product List tab window does not appear on the screen.", productsDataElementList.get(8).isDisplayed());
+        assertTrue("The 10th PRODUCT TABLE DATA in the Product List tab window does not appear on the screen.", productsDataElementList.get(9).isDisplayed());
+
+    }
+
 
 //********************************************  SCENARIO TC_3418  ****************************************************//
+
+    @Then("Click on the NAME filtering header in the tab that opens and verify that the ordering has changed.")
+    public void click_on_the_name_filtering_header_in_the_tab_that_opens_and_verify_that_the_ordering_has_changed() {
+
+        List<WebElement> productTitleElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']//th"));
+
+
+        for (WebElement eachElement : productTitleElementListSKUTab) {
+
+            System.out.print(eachElement.getText() + "    ");
+
+        }
+
+        productTitleElementListSKUTab.get(0).click();
+
+
+        ReusableMethods.bekle(1);
+
+
+        List<WebElement> productsDataElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementListSKUTab) {
+
+           eachElement2.getText();
+
+        }
+
+        System.out.println("SortBY SL: " + productsDataElementListSKUTab.get(0).getText());
+
+
+    productTitleElementListSKUTab.get(0).click();
+
+        ReusableMethods.bekle(1);
+
+
+        List<WebElement> productsDataElementListSKUTabSorted = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementListSKUTabSorted) {
+
+            eachElement2.getText();
+
+        }
+        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1),3);
+
+        System.out.println("SortBY NAME: " + productsDataElementListSKUTabSorted.get(0).getText());
+
+        assertNotEquals("The sorting did not change when the NAME filter sort header was clicked."
+                                , productsDataElementListSKUTabSorted.get(0), productsDataElementListSKUTab.get(0));
+
+
+
+    }
+    @Then("Click on the SL filtering header in the tab that opens and verify that the ordering has changed.")
+    public void click_on_the_sl_filtering_header_in_the_tab_that_opens_and_verify_that_the_ordering_has_changed() {
+
+        List<WebElement> productTitleElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']//th"));
+
+
+        for (WebElement eachElement : productTitleElementListSKUTab) {
+
+            System.out.print(eachElement.getText() + "    ");
+
+        }
+
+        productTitleElementListSKUTab.get(1).click();
+
+        ReusableMethods.bekle(1);
+
+        List<WebElement> productsDataElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementListSKUTab) {
+
+            eachElement2.getText();
+
+        }
+
+        System.out.println("SortBY : " + productsDataElementListSKUTab.get(0).getText());
+
+
+        productTitleElementListSKUTab.get(1).click();
+
+
+        ReusableMethods.bekle(1);
+
+
+        List<WebElement> productsDataElementListSKUTabSorted = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementListSKUTabSorted) {
+
+            eachElement2.getText();
+
+        }
+        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1),3);
+
+        System.out.println("SortBY NAME: " + productsDataElementListSKUTabSorted.get(0).getText());
+
+        assertNotEquals("The sorting did not change when the NAME filter sort header was clicked."
+                , productsDataElementListSKUTabSorted.get(0), productsDataElementListSKUTab.get(0));
+
+
+    }
+    @Then("Click on the BRAND filtering header in the tab that opens and verify that the ordering has changed.")
+    public void click_on_the_brand_filtering_header_in_the_tab_that_opens_and_verify_that_the_ordering_has_changed() {
+
+
+        List<WebElement> productTitleElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']//th"));
+
+
+        for (WebElement eachElement : productTitleElementListSKUTab) {
+
+            System.out.print(eachElement.getText() + "    ");
+
+        }
+
+        productTitleElementListSKUTab.get(2).click();
+
+        ReusableMethods.bekle(1);
+
+        List<WebElement> productsDataElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementListSKUTab) {
+
+            eachElement2.getText();
+
+        }
+
+        System.out.println("SortBY : " + productsDataElementListSKUTab.get(0).getText());
+
+
+        productTitleElementListSKUTab.get(2).click();
+
+
+        ReusableMethods.bekle(1);
+
+
+        List<WebElement> productsDataElementListSKUTabSorted = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementListSKUTabSorted) {
+
+            eachElement2.getText();
+
+        }
+        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1),3);
+
+        System.out.println("SortBY NAME: " + productsDataElementListSKUTabSorted.get(0).getText());
+
+        assertNotEquals("The sorting did not change when the NAME filter sort header was clicked."
+                , productsDataElementListSKUTabSorted.get(0), productsDataElementListSKUTab.get(0));
+
+
+    }
+    @Then("Click on the SKU filtering header in the tab that opens and verify that the ordering has changed.")
+    public void click_on_the_sku_filtering_header_in_the_tab_that_opens_and_verify_that_the_ordering_has_changed() {
+
+        List<WebElement> productTitleElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']//th"));
+
+
+        for (WebElement eachElement : productTitleElementListSKUTab) {
+
+            System.out.print(eachElement.getText() + "    ");
+
+        }
+
+        productTitleElementListSKUTab.get(3).click();
+
+        ReusableMethods.bekle(1);
+
+        List<WebElement> productsDataElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementListSKUTab) {
+
+            eachElement2.getText();
+
+        }
+
+        System.out.println("SortBY : " + productsDataElementListSKUTab.get(0).getText());
+
+
+        productTitleElementListSKUTab.get(3).click();
+
+
+        ReusableMethods.bekle(1);
+
+
+        List<WebElement> productsDataElementListSKUTabSorted = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementListSKUTabSorted) {
+
+            eachElement2.getText();
+
+        }
+        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1),3);
+
+        System.out.println("SortBY NAME: " + productsDataElementListSKUTabSorted.get(0).getText());
+
+        assertNotEquals("The sorting did not change when the NAME filter sort header was clicked."
+                , productsDataElementListSKUTabSorted.get(0), productsDataElementListSKUTab.get(0));
+
+
+    }
+
+    @Then("Click on the SELLING PRICE filtering header in the tab that opens and verify that the ordering has changed.")
+    public void click_on_the_selling_price_filtering_header_in_the_tab_that_opens_and_verify_that_the_ordering_has_changed() {
+
+        List<WebElement> productTitleElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']//th"));
+
+
+        for (WebElement eachElement : productTitleElementListSKUTab) {
+
+            System.out.print(eachElement.getText() + "    ");
+
+        }
+
+        productTitleElementListSKUTab.get(4).click();
+
+        ReusableMethods.bekle(1);
+
+        List<WebElement> productsDataElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementListSKUTab) {
+
+            eachElement2.getText();
+
+        }
+
+        System.out.println("SortBY : " + productsDataElementListSKUTab.get(0).getText());
+
+
+        productTitleElementListSKUTab.get(4).click();
+
+
+        ReusableMethods.bekle(1);
+
+
+        List<WebElement> productsDataElementListSKUTabSorted = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementListSKUTabSorted) {
+
+            eachElement2.getText();
+
+        }
+        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1),3);
+
+        System.out.println("SortBY NAME: " + productsDataElementListSKUTabSorted.get(0).getText());
+
+        assertNotEquals("The sorting did not change when the NAME filter sort header was clicked."
+                , productsDataElementListSKUTabSorted.get(0), productsDataElementListSKUTab.get(0));
+
+    }
+
+    @Then("Click on the IMAGE filtering header in the tab that opens and verify that the ordering has changed.")
+    public void click_on_the_image_filtering_header_in_the_tab_that_opens_and_verify_that_the_ordering_has_changed() {
+
+        List<WebElement> productTitleElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']//th"));
+
+
+        for (WebElement eachElement : productTitleElementListSKUTab) {
+
+            System.out.print(eachElement.getText() + "    ");
+
+        }
+
+        productTitleElementListSKUTab.get(5).click();
+
+        ReusableMethods.bekle(1);
+
+        List<WebElement> productsDataElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementListSKUTab) {
+
+            eachElement2.getText();
+
+        }
+
+        System.out.println("SortBY : " + productsDataElementListSKUTab.get(0).getText());
+
+
+        productTitleElementListSKUTab.get(5).click();
+
+
+        ReusableMethods.bekle(1);
+
+
+        List<WebElement> productsDataElementListSKUTabSorted = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementListSKUTabSorted) {
+
+            eachElement2.getText();
+
+        }
+        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1),3);
+
+        System.out.println("SortBY NAME: " + productsDataElementListSKUTabSorted.get(0).getText());
+
+        assertNotEquals("The sorting did not change when the NAME filter sort header was clicked."
+                , productsDataElementListSKUTabSorted.get(0), productsDataElementListSKUTab.get(0));
+
+    }
+
+    @Then("Click on the ACTION filtering header in the tab that opens and verify that the ordering has changed.")
+    public void click_on_the_action_filtering_header_in_the_tab_that_opens_and_verify_that_the_ordering_has_changed() {
+        List<WebElement> productTitleElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']//th"));
+
+
+        for (WebElement eachElement : productTitleElementListSKUTab) {
+
+            System.out.print(eachElement.getText() + "    ");
+
+        }
+
+        actions.moveToElement(productTitleElementListSKUTab.get(6));
+        actions.doubleClick(productTitleElementListSKUTab.get(6)).perform();
+
+        ReusableMethods.bekle(1);
+
+        List<WebElement> productsDataElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementListSKUTab) {
+
+            eachElement2.getText();
+
+        }
+
+        System.out.println("SortBY : " + productsDataElementListSKUTab.get(0).getText());
+
+
+        actions.moveToElement(productTitleElementListSKUTab.get(6));
+        actions.doubleClick(productTitleElementListSKUTab.get(6)).perform();
+
+
+        ReusableMethods.bekle(1);
+
+
+        List<WebElement> productsDataElementListSKUTabSorted = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']/tbody[1]/tr"));
+
+        for (WebElement eachElement2 : productsDataElementListSKUTabSorted) {
+
+            eachElement2.getText();
+
+        }
+        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1),3);
+
+        System.out.println("SortBY NAME: " + productsDataElementListSKUTabSorted.get(0).getText());
+
+        assertNotEquals("The sorting did not change when the NAME filter sort header was clicked."
+                , productsDataElementListSKUTabSorted.get(0), productsDataElementListSKUTab.get(0));
+    }
+
+
+//********************************************  SCENARIO TC_3419  ****************************************************//
+
+
+
+//********************************************  SCENARIO TC_3420  ****************************************************//
 
 
 }

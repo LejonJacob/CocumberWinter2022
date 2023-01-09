@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
 
         features = "src/test/Resources/Features",
         glue={"StepDefinitions", "Hooks"},
-        tags= "@hej",
-        dryRun = false
+        tags= "@ja",
+        dryRun = true
 )
 
 public class TestRunner {
