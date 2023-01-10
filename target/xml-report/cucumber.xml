@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="24.077">
-    <testcase classname="US_046 As an administrator, I want the Top Selling Item page to be able to see the list of the most sold products on the site." name="TC_04602 It should be verified that it can be searched in the Top Selling Item list from the Quick Search TextBox" time="23.246">
-        <failure message="" type="java.lang.AssertionError">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="24.286">
+    <testcase classname="US_046 As an administrator, I want the Top Selling Item page to be able to see the list of the most sold products on the site." name="TC_04603 It must be verified that the best selling products in the Top Selling Item list are listed under the headings Seller, Product, Total Sale , Average Rating" time="23.334">
+        <system-out>
             <![CDATA[Given Go to "myUrl" page....................................................passed
 Then Enter a valid "Email" address and "Password" in the relevant fields on the page that opens, then click the SIGN IN button..passed
 Then Then a message about successful login should appear in a green box in the upper right corner of the screen..passed
 Then The Admin Reports Title should be clickable under the CONTENT title on the left side of the screen on the Dashboard page..passed
 Then Click on the link button titled Top Selling Item from the options listed under the Admin Reports Title..passed
-Then In the window that opens type "bag" in the Quick Search box and search..passed
-Then Check whether there are products in the search result and whether the products are listed according to the search result..failed
-
-StackTrace:
-java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at StepDefinitions.TrendlifebuyStepDefinition.check_whether_there_are_products_in_the_search_result_and_whether_the_products_are_listed_according_to_the_search_result(TrendlifebuyStepDefinition.java:1479)
-	at ✽.Check whether there are products in the search result and whether the products are listed according to the search result.(file:///C:/Users/User/IdeaProjects/com.CocumberWinter2022/src/test/Resources/Features/US_046_TrendlifeBuyAdminReports.feature:22)
+Then It should be verified that the top selling products are listed under the headings Seller, Product, Total Sale, Average Rating on the page that opens..passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
 </testsuite>

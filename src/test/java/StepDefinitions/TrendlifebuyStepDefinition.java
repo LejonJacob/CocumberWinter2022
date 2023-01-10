@@ -38,7 +38,7 @@ public class TrendlifebuyStepDefinition {
 //********************************************  SCENARIO TC_3401  ****************************************************//
 
     @Given("Enter a valid {string} address and {string} in the relevant fields on the page that opens, then click the SIGN IN button.")
-    public void enter_a_valid_address_and_in_the_relevant_fields_on_the_page_that_opens_then_click_the_sign_in_button(String Email, String Password ) {
+    public void enter_a_valid_address_and_in_the_relevant_fields_on_the_page_that_opens_then_click_the_sign_in_button(String Email, String Password) {
         // Login is done by entering a valid Administrator Email and Password, then click the Sign in.
 
         trendlifebuyPage.myLoginMethod();
@@ -429,11 +429,11 @@ public class TrendlifebuyStepDefinition {
         }
 
         trendlifebuyPage.editProductRelatedProductTabButton.click();
-        ReusableMethods.waitForVisibility(editProductHeaders.get(1),1);
+        ReusableMethods.waitForVisibility(editProductHeaders.get(1), 1);
         assertTrue("The tab title RELATED PRODUCT in the Edit Product page window does not appear on the screen.", editProductHeaders.get(1).isDisplayed());
 
         trendlifebuyPage.editProductGeneralInformationTabButton.click();
-        ReusableMethods.waitForVisibility(editProductHeaders.get(0),1);
+        ReusableMethods.waitForVisibility(editProductHeaders.get(0), 1);
         assertTrue("The tab title GENERAL INFORMATION in the Edit Product page window does not appear on the screen.", editProductHeaders.get(0).isDisplayed());
 
     }
@@ -450,10 +450,11 @@ public class TrendlifebuyStepDefinition {
         }
 
         trendlifebuyPage.editProductUpSaleTabButton.click();
-        ReusableMethods.waitForVisibility(editProductHeaders.get(2),1);
+        ReusableMethods.waitForVisibility(editProductHeaders.get(2), 1);
         assertTrue("The tab title UP SALE in the Edit Product page window does not appear on the screen.", editProductHeaders.get(2).isDisplayed());
 
     }
+
     @Then("Click on the tab titled CROSS SALE on the Edit Product page and check that the title Cross sale appears in the window that opens.")
     public void click_on_the_tab_titled_cross_sale_on_the_edit_product_page_and_check_that_the_title_cross_sale_appears_in_the_window_that_opens() {
 
@@ -465,7 +466,7 @@ public class TrendlifebuyStepDefinition {
         }
 
         trendlifebuyPage.editProductCrossSaleTabButton.click();
-        ReusableMethods.waitForVisibility(editProductHeaders.get(3),1);
+        ReusableMethods.waitForVisibility(editProductHeaders.get(3), 1);
         assertTrue("The tab title CROSS SALE in the Edit Product page window does not appear on the screen.", editProductHeaders.get(3).isDisplayed());
 
     }
@@ -476,9 +477,10 @@ public class TrendlifebuyStepDefinition {
     @Then("Check that the Single checkbox under the Type option is selected.")
     public void check_that_the_single_checkbox_under_the_type_option_is_selected() {
 
-        assertTrue("The Single checkbox under the Type title option is not selected.",trendlifebuyPage.editProductSingleCheckBoxButton.isSelected());
-        assertFalse("The Variant checkbox under the Type title option is selected.",trendlifebuyPage.editProductVariantCheckBoxButton.isSelected());
+        assertTrue("The Single checkbox under the Type title option is not selected.", trendlifebuyPage.editProductSingleCheckBoxButton.isSelected());
+        assertFalse("The Variant checkbox under the Type title option is selected.", trendlifebuyPage.editProductVariantCheckBoxButton.isSelected());
     }
+
     @Then("Verify that the CHANGE NOT POSSIBLE FOR USE message appears under the Product Information heading that the Type option cannot be changed.")
     public void verify_that_the_change_not_possible_for_use_message_appears_under_the_product_information_heading_that_the_type_option_cannot_be_changed() {
         WebElement typeSelectStatus = Driver.getDriver().findElement(By.xpath("//label[.='Type (Change Not Possible for Use) *']"));
@@ -492,12 +494,12 @@ public class TrendlifebuyStepDefinition {
 
         actions.moveToElement(trendlifebuyPage.editProductVariantCheckBoxButton);
         actions.click(trendlifebuyPage.editProductVariantCheckBoxButton).perform();
-        assertFalse("The Variant checkbox under the Type title option is selected.",trendlifebuyPage.editProductVariantCheckBoxButton.isSelected());
+        assertFalse("The Variant checkbox under the Type title option is selected.", trendlifebuyPage.editProductVariantCheckBoxButton.isSelected());
 
     }
 
 
-//********************************************  SCENARIO TC_3411  ****************************************************//
+    //********************************************  SCENARIO TC_3411  ****************************************************//
     @Then("Click on the Related Product tab button, type {string} in the Quick Search box in the window that opens, Click and tick the checkboxes of the products found in the search result.")
     public void click_on_the_related_product_tab_button_type_in_the_quick_search_box_in_the_window_that_opens_click_and_tick_the_checkboxes_of_the_products_found_in_the_search_result(String bag) {
 
@@ -508,6 +510,7 @@ public class TrendlifebuyStepDefinition {
         actions.click(trendlifebuyPage.relatedProductQuickSearchResultTickAllProducts).perform();
 
     }
+
     @Then("Click the Up Sale tab button, type {string} in the Quick Search box in the window that opens, Click and tick the checkboxes of the products found in the search result.")
     public void click_the_up_sale_tab_button_type_in_the_quick_search_box_in_the_window_that_opens_click_and_tick_the_checkboxes_of_the_products_found_in_the_search_result(String bag) {
 
@@ -519,6 +522,7 @@ public class TrendlifebuyStepDefinition {
 
 
     }
+
     @Then("Click on the Cross Sale tab button, type {string} in the Quick Search box in the window that opens.")
     public void click_on_the_cross_sale_tab_button_type_in_the_quick_search_box_in_the_window_that_opens(String bag) {
 
@@ -527,6 +531,7 @@ public class TrendlifebuyStepDefinition {
         ReusableMethods.bekle(1);
 
     }
+
     @Then("Click and tick the checkboxes of the products found in the search result and click the Update button at the bottom of the window.")
     public void click_and_tick_the_checkboxes_of_the_products_found_in_the_search_result_and_click_the_update_button_at_the_bottom_of_the_window() {
 
@@ -535,6 +540,7 @@ public class TrendlifebuyStepDefinition {
 
         trendlifebuyPage.editAndCloneProductUpdateAndSaveButton.click();
     }
+
     @Then("Check that the message that the edited information has been successfully saved appears on the screen.")
     public void check_that_the_message_that_the_edited_information_has_been_successfully_saved_appears_on_the_screen() {
 
@@ -561,6 +567,7 @@ public class TrendlifebuyStepDefinition {
                     trendlifebuyPage.product1ListActionSelectCloneButton.isDisplayed());
         }
     }
+
     @Then("Click on the Clone button link and check that the page that opens is the Clone Product page.")
     public void click_on_the_clone_button_link_and_check_that_the_page_that_opens_is_the_clone_product_page() {
 
@@ -618,30 +625,37 @@ public class TrendlifebuyStepDefinition {
 
         actions.moveToElement(trendlifebuyPage.editProductSingleCheckBoxButton);
         actions.click(trendlifebuyPage.editProductSingleCheckBoxButton).perform();
-        assertTrue("The Single checkbox under the Type title option is not selected.",trendlifebuyPage.editProductSingleCheckBoxButton.isSelected());
+        assertTrue("The Single checkbox under the Type title option is not selected.", trendlifebuyPage.editProductSingleCheckBoxButton.isSelected());
 
     }
+
     @Then("Type {string} in the NAME text box and {string} in the PRODUCT SKU text box.")
     public void type_in_the_name_text_box_and_in_the_product_sku_text_box(String name, String productSKU) {
 
-        trendlifebuyPage.productInformationNAMETextBox.clear(); trendlifebuyPage.productInformationNAMETextBox.sendKeys(name);
-        trendlifebuyPage.productInformationPRODUCTSKUTextBox.clear(); trendlifebuyPage.productInformationPRODUCTSKUTextBox.sendKeys(productSKU);
-
+        trendlifebuyPage.productInformationNAMETextBox.clear();
+        trendlifebuyPage.productInformationNAMETextBox.sendKeys(name);
+        trendlifebuyPage.productInformationPRODUCTSKUTextBox.clear();
+        trendlifebuyPage.productInformationPRODUCTSKUTextBox.sendKeys(productSKU);
 
 
     }
+
     @Then("Type {string} in the SUBTITLE1 text box and {string} in the MODEL NUMBER text box.")
     public void type_in_the_subtitle_text_box_and_in_the_model_number_text_box(String subtitle1, String modelNo) {
 
-        trendlifebuyPage.productInformationSUBTITLE1TextBox.clear(); trendlifebuyPage.productInformationSUBTITLE1TextBox.sendKeys(subtitle1);
-        trendlifebuyPage.productInformationMODELNUMBERTextBox.clear(); trendlifebuyPage.productInformationMODELNUMBERTextBox.sendKeys(modelNo);
+        trendlifebuyPage.productInformationSUBTITLE1TextBox.clear();
+        trendlifebuyPage.productInformationSUBTITLE1TextBox.sendKeys(subtitle1);
+        trendlifebuyPage.productInformationMODELNUMBERTextBox.clear();
+        trendlifebuyPage.productInformationMODELNUMBERTextBox.sendKeys(modelNo);
     }
+
     @Then("Click on the CATEGORY text box, click on the Bags option in the mini pop-up box that appears.")
     public void click_on_the_category_text_box_click_on_the_bags_option_in_the_mini_pop_up_box_that_appears() {
 
         Select select = new Select(trendlifebuyPage.productInformationCATEGORYTextBox);
         select.selectByVisibleText("Bags");
     }
+
     @Then("Click on the box under the BRAND title and select the OzVittoria brand from the options.")
     public void click_on_the_box_under_the_brand_title_and_select_the_oz_vittoria_brand_from_the_options() {
 
@@ -650,6 +664,7 @@ public class TrendlifebuyStepDefinition {
         actions.moveToElement(trendlifebuyPage.productInformationBRANDSelectOzVittoria);
         actions.click(trendlifebuyPage.productInformationBRANDSelectOzVittoria).perform();
     }
+
     @Then("Click on the box under the UNIT heading and click on the LOT option from the options that appear.")
     public void click_on_the_box_under_the_unit_heading_and_click_on_the_lot_option_from_the_options_that_appear() {
 
@@ -660,6 +675,7 @@ public class TrendlifebuyStepDefinition {
 
 
     }
+
     @Then("Click on the box under the BARCODE TYPE title and click on any of the options that appear.")
     public void click_on_the_box_under_the_barcode_type_title_and_click_on_any_of_the_options_that_appear() {
 
@@ -669,20 +685,25 @@ public class TrendlifebuyStepDefinition {
         actions.click(trendlifebuyPage.productInformationUNITSelectC39E).perform();
 
     }
+
     @Then("Type {string} in the text box under the MINIMUM ORDER QTY title and {string} in the MAX ORDER QTY text box.")
     public void type_in_the_text_box_under_the_minimum_order_qty_title_and_in_the_max_order_qty_text_box(String orderQTY, String maxOrderQTY) {
 
-        trendlifebuyPage.productInformationMINORDERQTYBox.clear(); trendlifebuyPage.productInformationMINORDERQTYBox.sendKeys(orderQTY);
-        trendlifebuyPage.productInformationMAXORDERQTYBox.clear(); trendlifebuyPage.productInformationMAXORDERQTYBox.sendKeys(maxOrderQTY);
+        trendlifebuyPage.productInformationMINORDERQTYBox.clear();
+        trendlifebuyPage.productInformationMINORDERQTYBox.sendKeys(orderQTY);
+        trendlifebuyPage.productInformationMAXORDERQTYBox.clear();
+        trendlifebuyPage.productInformationMAXORDERQTYBox.sendKeys(maxOrderQTY);
 
 
     }
+
     @Then("Type {string} in the text box under Tags \\(Comma Separated).")
     public void type_in_the_text_box_under_tags_comma_separated(String tags) {
 
         trendlifebuyPage.productInformationTAGSBox.sendKeys(tags + Keys.ENTER);
 
     }
+
     @Then("Click the Browse button under Product Image Info and click the Upload New button from the pop-up window.")
     public void click_the_browse_button_under_product_image_info_and_click_the_upload_new_button_from_the_pop_up_window() {
 
@@ -691,9 +712,10 @@ public class TrendlifebuyStepDefinition {
         trendlifebuyPage.productImageUploadNewButton.click();
 
     }
+
     @Then("Upload an image file from your computer by clicking the Browse files link and click the Done button.")
     public void upload_an_image_file_from_your_computer_by_clicking_the_browse_files_link_and_click_the_done_button() {
-        String yuklenecekDosyaYolu= System.getProperty("user.home") + "\\Desktop\\FileTesti\\UrunGorseli.jpg";
+        String yuklenecekDosyaYolu = System.getProperty("user.home") + "\\Desktop\\FileTesti\\UrunGorseli.jpg";
         //"C:\Users\User\Desktop\FileTesti\UrunGorseli.jpg"
 
         trendlifebuyPage.productImageBrowseFileLinkButton.sendKeys(yuklenecekDosyaYolu);
@@ -736,11 +758,12 @@ public class TrendlifebuyStepDefinition {
     @Then("Upload a PDF file from your computer by clicking the Browse button in the Upload PDF section under PDF SPECIFICATIONS.")
     public void upload_a_pdf_file_from_your_computer_by_clicking_the_browse_button_in_the_upload_pdf_section_under_pdf_specifications() {
 
-        String yuklenecekPDFDosyaYolu= System.getProperty("user.home") + "\\Desktop\\FileTesti\\DeriCanta-SB-SS2021.pdf";
+        String yuklenecekPDFDosyaYolu = System.getProperty("user.home") + "\\Desktop\\FileTesti\\DeriCanta-SB-SS2021.pdf";
         //"C:\Users\User\Desktop\FileTesti\UrunGorseli.jpg"
 
         trendlifebuyPage.productPdfSpecificationsBrowseBox.sendKeys(yuklenecekPDFDosyaYolu);
     }
+
     @Then("Select Youtube from the VIDEO PROVIDER box under the heading Product Video Information and print a {string} in the VIDEO LINK text box.")
     public void select_youtube_from_the_video_provider_box_under_the_heading_product_video_information_and_print_a_in_the_video_link_text_box(String youTube) {
 
@@ -749,6 +772,7 @@ public class TrendlifebuyStepDefinition {
 
         trendlifebuyPage.productVideoLinkTextBox.sendKeys(ConfigReader.getProperty("YoutubeUrl"));
     }
+
     @Then("Check that the STATUS and MAKE DISPLAY IN DETAILS PAGE selected information under Others Info can be changed.")
     public void check_that_the_status_and_make_display_in_details_page_selected_information_under_others_info_can_be_changed() {
 
@@ -769,23 +793,32 @@ public class TrendlifebuyStepDefinition {
         assertTrue(trendlifebuyPage.productMakeDisplayDetailsCheckBoxUpSaleIsSelect.isSelected());
 
     }
+
     @Then("Check that the selected and written information under the Weight Height Info heading can be changed.")
     public void check_that_the_selected_and_written_information_under_the_weight_height_info_heading_can_be_changed() {
 
-        trendlifebuyPage.productWeightHeightInfoWeight.clear(); trendlifebuyPage.productWeightHeightInfoWeight.sendKeys("600");
-        trendlifebuyPage.productWeightHeightInfoLength.clear(); trendlifebuyPage.productWeightHeightInfoLength.sendKeys("30");
-        trendlifebuyPage.productWeightHeightInfoBreadth.clear(); trendlifebuyPage.productWeightHeightInfoBreadth.sendKeys("20");
-        trendlifebuyPage.productWeightHeightInfoHeight.clear(); trendlifebuyPage.productWeightHeightInfoHeight.sendKeys("15");
-        trendlifebuyPage.productWeightHeightInfoAdditionalShipping.clear(); trendlifebuyPage.productWeightHeightInfoAdditionalShipping.sendKeys("1");
+        trendlifebuyPage.productWeightHeightInfoWeight.clear();
+        trendlifebuyPage.productWeightHeightInfoWeight.sendKeys("600");
+        trendlifebuyPage.productWeightHeightInfoLength.clear();
+        trendlifebuyPage.productWeightHeightInfoLength.sendKeys("30");
+        trendlifebuyPage.productWeightHeightInfoBreadth.clear();
+        trendlifebuyPage.productWeightHeightInfoBreadth.sendKeys("20");
+        trendlifebuyPage.productWeightHeightInfoHeight.clear();
+        trendlifebuyPage.productWeightHeightInfoHeight.sendKeys("15");
+        trendlifebuyPage.productWeightHeightInfoAdditionalShipping.clear();
+        trendlifebuyPage.productWeightHeightInfoAdditionalShipping.sendKeys("1");
 
         trendlifebuyPage.productWeightHeightInfoStockManage.click();
         actions.moveToElement(trendlifebuyPage.productWeightHeightInfoStockManageYES);
         actions.click(trendlifebuyPage.productWeightHeightInfoStockManageYES).perform();
 
-        trendlifebuyPage.productWeightHeightInfoProductStockTextBox.clear(); trendlifebuyPage.productWeightHeightInfoProductStockTextBox.sendKeys("999");
+        trendlifebuyPage.productWeightHeightInfoProductStockTextBox.clear();
+        trendlifebuyPage.productWeightHeightInfoProductStockTextBox.sendKeys("999");
 
-        trendlifebuyPage.productWeightHeightInfoSellingPrice.clear(); trendlifebuyPage.productWeightHeightInfoSellingPrice.sendKeys("25");
-        trendlifebuyPage.productWeightHeightInfoDiscount.clear(); trendlifebuyPage.productWeightHeightInfoDiscount.sendKeys("0");
+        trendlifebuyPage.productWeightHeightInfoSellingPrice.clear();
+        trendlifebuyPage.productWeightHeightInfoSellingPrice.sendKeys("25");
+        trendlifebuyPage.productWeightHeightInfoDiscount.clear();
+        trendlifebuyPage.productWeightHeightInfoDiscount.sendKeys("0");
 
         trendlifebuyPage.productWeightHeightInfoDiscountType.click();
         actions.moveToElement(trendlifebuyPage.productWeightHeightInfoDiscountTypePercentage);
@@ -801,19 +834,24 @@ public class TrendlifebuyStepDefinition {
     @Then("Write a description about the product in the text boxes under the headings Description and Specifications.")
     public void write_a_description_about_the_product_in_the_text_boxes_under_the_headings_description_and_specifications() {
 
-        trendlifebuyPage.productDescriptionTextBox.clear(); trendlifebuyPage.productDescriptionTextBox.sendKeys(ConfigReader.getProperty("Description"));
-        trendlifebuyPage.productSpecificationsTextBox.clear(); trendlifebuyPage.productSpecificationsTextBox.sendKeys(ConfigReader.getProperty("Specifications"));
+        trendlifebuyPage.productDescriptionTextBox.clear();
+        trendlifebuyPage.productDescriptionTextBox.sendKeys(ConfigReader.getProperty("Description"));
+        trendlifebuyPage.productSpecificationsTextBox.clear();
+        trendlifebuyPage.productSpecificationsTextBox.sendKeys(ConfigReader.getProperty("Specifications"));
 
     }
 
     @Then("Type a title and description in the META TITLE and META DESCRIPTION text boxes under SEO info.")
     public void type_a_title_and_description_in_the_meta_title_and_meta_description_text_boxes_under_seo_info() {
 
-        trendlifebuyPage.productSEOInfoMetaTitleTextBox.clear(); trendlifebuyPage.productSEOInfoMetaTitleTextBox.sendKeys("None");
+        trendlifebuyPage.productSEOInfoMetaTitleTextBox.clear();
+        trendlifebuyPage.productSEOInfoMetaTitleTextBox.sendKeys("None");
 
-        trendlifebuyPage.productSEOInfoMetaDescriptionTextBox.clear(); trendlifebuyPage.productSEOInfoMetaDescriptionTextBox.sendKeys(ConfigReader.getProperty("MetaDescription"));
+        trendlifebuyPage.productSEOInfoMetaDescriptionTextBox.clear();
+        trendlifebuyPage.productSEOInfoMetaDescriptionTextBox.sendKeys(ConfigReader.getProperty("MetaDescription"));
 
     }
+
     @Then("Then click the Save button at the bottom of the page and check that the information has been successfully saved.")
     public void then_click_the_save_button_at_the_bottom_of_the_page_and_check_that_the_information_has_been_successfully_saved() {
 
@@ -822,7 +860,6 @@ public class TrendlifebuyStepDefinition {
                 trendlifebuyPage.editAndCloneProductUpdateSuccessMessage.isDisplayed());
 
     }
-
 
 
 //********************************************  SCENARIO TC_3414  ****************************************************//
@@ -834,32 +871,35 @@ public class TrendlifebuyStepDefinition {
         javaScript.executeScript("arguments[0].scrollIntoView();", trendlifebuyPage.cloneProductUnderPageAlertWarningMessage);
         ReusableMethods.waitForVisibility(trendlifebuyPage.cloneProductUnderPageAlertWarningMessage, 3);
         assertTrue("At the end of the GENERAL INFORMATION tab window, the message reminding that the information must be filled before registration does not appear."
-                ,trendlifebuyPage.cloneProductUnderPageAlertWarningMessage.isDisplayed());
+                , trendlifebuyPage.cloneProductUnderPageAlertWarningMessage.isDisplayed());
 
     }
+
     @Then("Click on the RELATED PRODUCT tab, verify that the Related Product window appears at the end of the page reminding you to fill in the information before recording.")
     public void click_on_the_related_product_tab_verify_that_the_related_product_window_appears_at_the_end_of_the_page_reminding_you_to_fill_in_the_information_before_recording() {
 
         trendlifebuyPage.editProductRelatedProductTabButton.click();
         javaScript.executeScript("arguments[0].scrollIntoView();", trendlifebuyPage.cloneProductUnderPageAlertWarningMessage);
         assertTrue("At the end of the Related Product tab window, the message reminding that the information must be filled before registration does not appear."
-                ,trendlifebuyPage.cloneProductUnderPageAlertWarningMessage.isDisplayed());
+                , trendlifebuyPage.cloneProductUnderPageAlertWarningMessage.isDisplayed());
     }
+
     @Then("Click on the UP SALE tab, verify that the Up Sale window appears at the end of the page, reminding that the information must be filled before registration.")
     public void click_on_the_up_sale_tab_verify_that_the_up_sale_window_appears_at_the_end_of_the_page_reminding_that_the_information_must_be_filled_before_registration() {
 
         trendlifebuyPage.editProductUpSaleTabButton.click();
         javaScript.executeScript("arguments[0].scrollIntoView();", trendlifebuyPage.cloneProductUnderPageAlertWarningMessage);
         assertTrue("At the end of the UP SALE tab window, the message reminding that the information must be filled before registration does not appear."
-                ,trendlifebuyPage.cloneProductUnderPageAlertWarningMessage.isDisplayed());
+                , trendlifebuyPage.cloneProductUnderPageAlertWarningMessage.isDisplayed());
     }
+
     @Then("Click on the CROSS SALE tab, verify that the Cross sale window appears at the end of the page, reminding that the information must be filled before registration.")
     public void click_on_the_cross_sale_tab_verify_that_the_cross_sale_window_appears_at_the_end_of_the_page_reminding_that_the_information_must_be_filled_before_registration() {
 
         trendlifebuyPage.editProductCrossSaleTabButton.click();
         javaScript.executeScript("arguments[0].scrollIntoView();", trendlifebuyPage.cloneProductUnderPageAlertWarningMessage);
         assertTrue("At the end of the CROSS SALE tab window, the message reminding that the information must be filled before registration does not appear."
-                ,trendlifebuyPage.cloneProductUnderPageAlertWarningMessage.isDisplayed());
+                , trendlifebuyPage.cloneProductUnderPageAlertWarningMessage.isDisplayed());
 
     }
 
@@ -882,10 +922,11 @@ public class TrendlifebuyStepDefinition {
         trendlifebuyPage.editAndCloneProductUpdateAndSaveButton.click();
 
     }
+
     @Then("Verify that the about saved the product has been successfully message appears on the screen.")
     public void verify_that_the_about_saved_the_product_has_been_successfully_message_appears_on_the_screen() {
 
-        ReusableMethods.waitForVisibility(trendlifebuyPage.editAndCloneProductUpdateSuccessMessage,3);
+        ReusableMethods.waitForVisibility(trendlifebuyPage.editAndCloneProductUpdateSuccessMessage, 3);
         assertTrue("The Clone Product Update Success Message does not appear on the screen",
                 trendlifebuyPage.editAndCloneProductUpdateSuccessMessage.isDisplayed());
 
@@ -931,6 +972,7 @@ public class TrendlifebuyStepDefinition {
                 trendlifebuyPage.productListQuickSearchBoxProductTwoDeleteLinkBut.isDisplayed());
 
     }
+
     @Then("Click the Delete and then click the Delete button in the mini alert window that will appear.")
     public void click_the_delete_and_then_click_the_delete_button_in_the_mini_alert_window_that_will_appear() {
 
@@ -939,6 +981,7 @@ public class TrendlifebuyStepDefinition {
         ReusableMethods.waitForVisibility(trendlifebuyPage.productListAlertDeleteButton, 2);
         trendlifebuyPage.productListAlertDeleteButton.click();
     }
+
     @Then("Check that a green pop-up message appears in the upper right corner of the screen stating that the product has been Deleted Successfully.")
     public void check_that_a_green_pop_up_message_appears_in_the_upper_right_corner_of_the_screen_stating_that_the_product_has_been_deleted_successfully() {
 
@@ -958,6 +1001,7 @@ public class TrendlifebuyStepDefinition {
 
 
     }
+
     @Then("Verify that the products are listed and appearing under the headings SL, Name, Brand, SKU, Selling Price, Image, Action in the tab that appears.")
     public void verify_that_the_products_are_listed_and_appearing_under_the_headings_sl_name_brand_sku_selling_price_image_action_in_the_tab_that_appears() {
 
@@ -1028,14 +1072,14 @@ public class TrendlifebuyStepDefinition {
 
         for (WebElement eachElement2 : productsDataElementListSKUTab) {
 
-           eachElement2.getText();
+            eachElement2.getText();
 
         }
 
         System.out.println("SortBY SL: " + productsDataElementListSKUTab.get(0).getText());
 
 
-    productTitleElementListSKUTab.get(0).click();
+        productTitleElementListSKUTab.get(0).click();
 
         ReusableMethods.bekle(1);
 
@@ -1047,16 +1091,16 @@ public class TrendlifebuyStepDefinition {
             eachElement2.getText();
 
         }
-        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1),3);
+        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1), 3);
 
         System.out.println("SortBY NAME: " + productsDataElementListSKUTabSorted.get(0).getText());
 
         assertNotEquals("The sorting did not change when the NAME filter sort header was clicked."
-                                , productsDataElementListSKUTabSorted.get(0), productsDataElementListSKUTab.get(0));
-
+                , productsDataElementListSKUTabSorted.get(0), productsDataElementListSKUTab.get(0));
 
 
     }
+
     @Then("Click on the SL filtering header in the tab that opens and verify that the ordering has changed.")
     public void click_on_the_sl_filtering_header_in_the_tab_that_opens_and_verify_that_the_ordering_has_changed() {
 
@@ -1097,7 +1141,7 @@ public class TrendlifebuyStepDefinition {
             eachElement2.getText();
 
         }
-        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1),3);
+        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1), 3);
 
         System.out.println("SortBY NAME: " + productsDataElementListSKUTabSorted.get(0).getText());
 
@@ -1106,6 +1150,7 @@ public class TrendlifebuyStepDefinition {
 
 
     }
+
     @Then("Click on the BRAND filtering header in the tab that opens and verify that the ordering has changed.")
     public void click_on_the_brand_filtering_header_in_the_tab_that_opens_and_verify_that_the_ordering_has_changed() {
 
@@ -1147,7 +1192,7 @@ public class TrendlifebuyStepDefinition {
             eachElement2.getText();
 
         }
-        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1),3);
+        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1), 3);
 
         System.out.println("SortBY NAME: " + productsDataElementListSKUTabSorted.get(0).getText());
 
@@ -1156,6 +1201,7 @@ public class TrendlifebuyStepDefinition {
 
 
     }
+
     @Then("Click on the SKU filtering header in the tab that opens and verify that the ordering has changed.")
     public void click_on_the_sku_filtering_header_in_the_tab_that_opens_and_verify_that_the_ordering_has_changed() {
 
@@ -1196,7 +1242,7 @@ public class TrendlifebuyStepDefinition {
             eachElement2.getText();
 
         }
-        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1),3);
+        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1), 3);
 
         System.out.println("SortBY NAME: " + productsDataElementListSKUTabSorted.get(0).getText());
 
@@ -1246,7 +1292,7 @@ public class TrendlifebuyStepDefinition {
             eachElement2.getText();
 
         }
-        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1),3);
+        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1), 3);
 
         System.out.println("SortBY NAME: " + productsDataElementListSKUTabSorted.get(0).getText());
 
@@ -1295,7 +1341,7 @@ public class TrendlifebuyStepDefinition {
             eachElement2.getText();
 
         }
-        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1),3);
+        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1), 3);
 
         System.out.println("SortBY NAME: " + productsDataElementListSKUTabSorted.get(0).getText());
 
@@ -1346,7 +1392,7 @@ public class TrendlifebuyStepDefinition {
             eachElement2.getText();
 
         }
-        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1),3);
+        ReusableMethods.fluentWait(productsDataElementListSKUTabSorted.get(1), 3);
 
         System.out.println("SortBY NAME: " + productsDataElementListSKUTabSorted.get(0).getText());
 
@@ -1358,13 +1404,11 @@ public class TrendlifebuyStepDefinition {
 //********************************************  SCENARIO TC_3419  ****************************************************//
 
 
-
 /*********************************************    SECOND SPLINT   *****************************************************/
-/*********************************************    SECOND SPLINT   *****************************************************/
+    /*********************************************    SECOND SPLINT   *****************************************************/
 
 
 //********************************************  SCENARIO TC_04601  ****************************************************//
-
     @Then("The Admin Reports Title should be clickable under the CONTENT title on the left side of the screen on the Dashboard page.")
     public void the_admin_reports_title_should_be_clickable_under_the_content_title_on_the_left_side_of_the_screen_on_the_dashboard_page() {
 
@@ -1372,6 +1416,7 @@ public class TrendlifebuyStepDefinition {
         trendlifebuyPage.adminReportsLinkButton.click();
 
     }
+
     @Then("Click on the link button titled Top Selling Item from the options listed under the Admin Reports Title.")
     public void click_on_the_link_button_titled_top_selling_item_from_the_options_listed_under_the_admin_reports_title() {
 
@@ -1379,6 +1424,7 @@ public class TrendlifebuyStepDefinition {
         actions.click(trendlifebuyPage.adminReportsTopSellingItemLinkButton).perform();
         ReusableMethods.waitForPageToLoad(4);
     }
+
     @Then("Then, it is checked that the Admin Reports page is opened and the Top Selling Item window visible on the screen.")
     public void then_it_is_checked_that_the_admin_reports_page_is_opened_and_the_top_selling_item_window_visible_on_the_screen() {
 
@@ -1390,8 +1436,9 @@ public class TrendlifebuyStepDefinition {
         assertTrue("The Top Selling Item window does not visible on the screen", trendlifebuyPage.adminReportsTopSellingItemWindow.isDisplayed());
 
     }
-    @Then("Then it is checked that the products are listed in the Best Selling Products window.")
-    public void then_it_is_checked_that_the_products_are_listed_in_the_best_selling_products_window() {
+
+    @Then("Then it is checked that the products are listed in the Top Selling Item window.")
+    public void then_it_is_checked_that_the_products_are_listed_in_the_top_selling_item_window() {
 
         List<WebElement> topSellingItemTitleElementList = Driver.getDriver().findElements(By.xpath("//th[@scope]"));
 
@@ -1418,7 +1465,7 @@ public class TrendlifebuyStepDefinition {
         assertTrue("The table title AVERAGE RATING in the Top Selling Item window does not appear on the screen.", topSellingItemTitleElementList.get(4).isDisplayed());
 
 
-    javaScript.executeScript("arguments[0].scrollIntoView();", topSellingItemsDataElementList.get(8));
+        javaScript.executeScript("arguments[0].scrollIntoView();", topSellingItemsDataElementList.get(8));
 
 
         assertTrue("The 1th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(0).isDisplayed());
@@ -1481,5 +1528,53 @@ public class TrendlifebuyStepDefinition {
     }
 
 
+//********************************************  SCENARIO TC_04603  ****************************************************//
+
+    @Then("It should be verified that the top selling products are listed under the headings Seller, Product, Total Sale, Average Rating on the page that opens.")
+    public void it_should_be_verified_that_the_top_selling_products_are_listed_under_the_headings_seller_product_total_sale_average_rating_on_the_page_that_opens() {
+
+        List<WebElement> topSellingItemTitleElementList = Driver.getDriver().findElements(By.xpath("//th[@scope]"));
+
+        for (WebElement eachElement : topSellingItemTitleElementList) {
+
+            System.out.print(eachElement.getText() + "    ");
+
+        }
+
+        System.out.print("\n");
+
+        List<WebElement> topSellingItemsDataElementList = Driver.getDriver().findElements(By.xpath("//tr[@class]"));
+
+        for (WebElement eachElement2 : topSellingItemsDataElementList) {
+
+            System.out.println(eachElement2.getText());
+        }
+
+
+        assertTrue("The table title SL in the Top Selling Item window does not appear on the screen.", topSellingItemTitleElementList.get(0).isDisplayed());
+        assertTrue("The table title SELLER in the Top Selling Item window does not appear on the screen.", topSellingItemTitleElementList.get(1).isDisplayed());
+        assertTrue("The table title PRODUCT TYPE in the Top Selling Item window does not appear on the screen.", topSellingItemTitleElementList.get(2).isDisplayed());
+        assertTrue("The table title TOTAL SALE in the Top Selling Item window does not appear on the screen.", topSellingItemTitleElementList.get(3).isDisplayed());
+        assertTrue("The table title AVERAGE RATING in the Top Selling Item window does not appear on the screen.", topSellingItemTitleElementList.get(4).isDisplayed());
+
+
+        javaScript.executeScript("arguments[0].scrollIntoView();", topSellingItemsDataElementList.get(8));
+
+
+        assertTrue("The 1th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(0).isDisplayed());
+        assertTrue("The 2nd PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(1).isDisplayed());
+        assertTrue("The 3th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(2).isDisplayed());
+        assertTrue("The 4th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(3).isDisplayed());
+        assertTrue("The 5th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(4).isDisplayed());
+        assertTrue("The 6th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(5).isDisplayed());
+        assertTrue("The 7th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(6).isDisplayed());
+        assertTrue("The 8th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(7).isDisplayed());
+        assertTrue("The 9th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(8).isDisplayed());
+        assertTrue("The 10th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(9).isDisplayed());
+
+    }
+
+
+//********************************************  SCENARIO TC_04604  ****************************************************//
 
 }
