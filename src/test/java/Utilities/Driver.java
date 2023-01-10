@@ -59,7 +59,7 @@ public class Driver {
 
         if (driver!=null){
 
-            driver.close();
+            // driver.close();
             driver=null;
 
         }

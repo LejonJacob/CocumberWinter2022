@@ -30,13 +30,15 @@ public class TrendlifebuyStepDefinition {
         // Go to Url https://trendlifebuy.com/admin/login
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
 
+        ReusableMethods.waitForPageToLoad(3);
+
     }
 
 
 //********************************************  SCENARIO TC_3401  ****************************************************//
 
     @Given("Enter a valid {string} address and {string} in the relevant fields on the page that opens, then click the SIGN IN button.")
-    public void enter_a_valid_address_and_in_the_relevant_fields_on_the_page_that_opens_then_click_the_sign_in_button(String Email, String Password) {
+    public void enter_a_valid_address_and_in_the_relevant_fields_on_the_page_that_opens_then_click_the_sign_in_button(String Email, String Password ) {
         // Login is done by entering a valid Administrator Email and Password, then click the Sign in.
 
         trendlifebuyPage.myLoginMethod();
@@ -1304,6 +1306,7 @@ public class TrendlifebuyStepDefinition {
 
     @Then("Click on the ACTION filtering header in the tab that opens and verify that the ordering has changed.")
     public void click_on_the_action_filtering_header_in_the_tab_that_opens_and_verify_that_the_ordering_has_changed() {
+
         List<WebElement> productTitleElementListSKUTab = Driver.getDriver().findElements(By.xpath("//table[@id='SKUTable']//th"));
 
 
@@ -1356,7 +1359,127 @@ public class TrendlifebuyStepDefinition {
 
 
 
-//********************************************  SCENARIO TC_3420  ****************************************************//
+/*********************************************    SECOND SPLINT   *****************************************************/
+/*********************************************    SECOND SPLINT   *****************************************************/
+
+
+//********************************************  SCENARIO TC_04601  ****************************************************//
+
+    @Then("The Admin Reports Title should be clickable under the CONTENT title on the left side of the screen on the Dashboard page.")
+    public void the_admin_reports_title_should_be_clickable_under_the_content_title_on_the_left_side_of_the_screen_on_the_dashboard_page() {
+
+        javaScript.executeScript("arguments[0].scrollIntoView();", trendlifebuyPage.adminReportsLinkButton);
+        trendlifebuyPage.adminReportsLinkButton.click();
+
+    }
+    @Then("Click on the link button titled Top Selling Item from the options listed under the Admin Reports Title.")
+    public void click_on_the_link_button_titled_top_selling_item_from_the_options_listed_under_the_admin_reports_title() {
+
+        actions.scrollToElement(trendlifebuyPage.adminReportsTopSellingItemLinkButton);
+        actions.click(trendlifebuyPage.adminReportsTopSellingItemLinkButton).perform();
+        ReusableMethods.waitForPageToLoad(4);
+    }
+    @Then("Then, it is checked that the Admin Reports page is opened and the Top Selling Item window visible on the screen.")
+    public void then_it_is_checked_that_the_admin_reports_page_is_opened_and_the_top_selling_item_window_visible_on_the_screen() {
+
+        String actualUrl = "https://trendlifebuy.com/admin-dashboard";
+        String expectedUrl = Driver.getDriver().getCurrentUrl();
+        assertNotEquals(expectedUrl, actualUrl);
+
+        ReusableMethods.waitForVisibility(trendlifebuyPage.adminReportsTopSellingItemWindow, 2);
+        assertTrue("The Top Selling Item window does not visible on the screen", trendlifebuyPage.adminReportsTopSellingItemWindow.isDisplayed());
+
+    }
+    @Then("Then it is checked that the products are listed in the Best Selling Products window.")
+    public void then_it_is_checked_that_the_products_are_listed_in_the_best_selling_products_window() {
+
+        List<WebElement> topSellingItemTitleElementList = Driver.getDriver().findElements(By.xpath("//th[@scope]"));
+
+        for (WebElement eachElement : topSellingItemTitleElementList) {
+
+            System.out.print(eachElement.getText() + "    ");
+
+        }
+
+        System.out.print("    ");
+
+        List<WebElement> topSellingItemsDataElementList = Driver.getDriver().findElements(By.xpath("//tr[@class]"));
+
+        for (WebElement eachElement2 : topSellingItemsDataElementList) {
+
+            System.out.println(eachElement2.getText());
+        }
+
+
+        assertTrue("The table title SL in the Top Selling Item window does not appear on the screen.", topSellingItemTitleElementList.get(0).isDisplayed());
+        assertTrue("The table title SELLER in the Top Selling Item window does not appear on the screen.", topSellingItemTitleElementList.get(1).isDisplayed());
+        assertTrue("The table title PRODUCT TYPE in the Top Selling Item window does not appear on the screen.", topSellingItemTitleElementList.get(2).isDisplayed());
+        assertTrue("The table title TOTAL SALE in the Top Selling Item window does not appear on the screen.", topSellingItemTitleElementList.get(3).isDisplayed());
+        assertTrue("The table title AVERAGE RATING in the Top Selling Item window does not appear on the screen.", topSellingItemTitleElementList.get(4).isDisplayed());
+
+
+    javaScript.executeScript("arguments[0].scrollIntoView();", topSellingItemsDataElementList.get(8));
+
+
+        assertTrue("The 1th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(0).isDisplayed());
+        assertTrue("The 2nd PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(1).isDisplayed());
+        assertTrue("The 3th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(2).isDisplayed());
+        assertTrue("The 4th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(3).isDisplayed());
+        assertTrue("The 5th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(4).isDisplayed());
+        assertTrue("The 6th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(5).isDisplayed());
+        assertTrue("The 7th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(6).isDisplayed());
+        assertTrue("The 8th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(7).isDisplayed());
+        assertTrue("The 9th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(8).isDisplayed());
+        assertTrue("The 10th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataElementList.get(9).isDisplayed());
+
+    }
+
+
+//********************************************  SCENARIO TC_04602  ****************************************************//
+
+    @Then("In the window that opens type {string} in the Quick Search box and search.")
+    public void in_the_window_that_opens_type_in_the_quick_search_box_and_search(String search) {
+
+        List<WebElement> topSellingItemsDataSearchResultList1 = Driver.getDriver().findElements(By.xpath("//tr[@class]"));
+
+        for (WebElement eachElement2 : topSellingItemsDataSearchResultList1) {
+
+            System.out.println(eachElement2.getText());
+        }
+
+        assertTrue("The 1th PRODUCT TABLE DATA in the Top Selling Item window does not appear on the screen.", topSellingItemsDataSearchResultList1.get(0).isDisplayed());
+
+        ReusableMethods.getScreenshot("Top Selling Item table before search");
+
+        trendlifebuyPage.topSellingItemQuickSearchBox.sendKeys(search);
+
+    }
+
+    @Then("Check whether there are products in the search result and whether the products are listed according to the search result.")
+    public void check_whether_there_are_products_in_the_search_result_and_whether_the_products_are_listed_according_to_the_search_result() {
+
+        ReusableMethods.waitForVisibility(trendlifebuyPage.topSellingItemQuickSearchBoxResult, 2);
+        System.out.println("\n" + trendlifebuyPage.topSellingItemQuickSearchBoxResult.getText());
+
+        assertTrue("When a word was typed into the Quick Search box in the Top Selling Item window, related product was found.",
+                trendlifebuyPage.topSellingItemQuickSearchBoxResult.isDisplayed());
+
+        System.out.println(trendlifebuyPage.topSellingItemResultTableInfo.getText());
+
+        ReusableMethods.getScreenshot("No matching records found");
+
+
+        List<WebElement> topSellingItemsDataSearchResultList2 = Driver.getDriver().findElements(By.xpath("//tr[@class]"));
+
+        for (WebElement eachElement2 : topSellingItemsDataSearchResultList2) {
+
+            System.out.println(eachElement2.getText());
+        }
+
+        assertTrue(topSellingItemsDataSearchResultList2.get(0).getText().contains("bag"));
+
+    }
+
 
 
 }

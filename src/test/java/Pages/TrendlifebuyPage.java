@@ -22,7 +22,7 @@ public class TrendlifebuyPage {
     @FindBy(xpath = "//input[@id='password']")
     public WebElement passwordBox;
 
-    @FindBy(xpath = "//span[@class='label_name f_w_400 ']")
+    @FindBy(xpath = "//span[@class='checkmark mr_15']")
     public WebElement rememberMeBox;
 
     @FindBy(xpath = "//button[@id='sign_in_btn']")
@@ -369,6 +369,28 @@ public class TrendlifebuyPage {
     public WebElement productListDeleteProductSuccessMessage;
 
 
+
+
+
+/*********************************************    SECOND SPLINT   *****************************************************/
+
+    @FindBy(xpath = "//span[.='Admin Reports']")
+    public WebElement adminReportsLinkButton;
+
+    @FindBy(xpath = "//a[.='Top selling item']")
+    public WebElement adminReportsTopSellingItemLinkButton;
+
+    @FindBy(xpath = "//div[@class='main-title d-md-flex']")
+    public WebElement adminReportsTopSellingItemWindow;
+
+    @FindBy(css = "[placeholder='Quick Search']")
+    public WebElement topSellingItemQuickSearchBox;
+
+    @FindBy(xpath = "//td[@class='dataTables_empty']")
+    public WebElement topSellingItemQuickSearchBoxResult;
+
+    @FindBy(xpath = "//div[@id='visitorTable_info']")
+    public WebElement topSellingItemResultTableInfo;
 
 
     public void GetChromeOptions()
