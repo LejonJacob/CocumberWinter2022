@@ -1547,7 +1547,7 @@ public class TrendlifebuyStepDefinition {
 
         for (WebElement eachElement2 : topSellingItemsDataElementList) {
 
-            System.out.println(eachElement2.getText());
+            System.out.println(eachElement2.getText() + "  ");
         }
 
 
@@ -1576,5 +1576,74 @@ public class TrendlifebuyStepDefinition {
 
 
 //********************************************  SCENARIO TC_04604  ****************************************************//
+
+    @Then("Click on the direction arrows or page numbers at the bottom of the page to switch between the pages where the products are listed.")
+    public void click_on_the_direction_arrows_or_page_numbers_at_the_bottom_of_the_page_to_switch_between_the_pages_where_the_products_are_listed() {
+
+        trendlifebuyPage.topSellingItemNextPageButton.click();
+        ReusableMethods.bekle(2);
+        trendlifebuyPage.topSellingItemPreviousPageButton.click();
+        ReusableMethods.bekle(1);
+    }
+    @Then("Then it should be verified that there are transitions between the pages in the Top Selling Item List and that the pages change.")
+    public void then_it_should_be_verified_that_there_are_transitions_between_the_pages_in_the_top_selling_item_list_and_that_the_pages_change() {
+
+        List<WebElement> topSellingItemsDataElementList1 = Driver.getDriver().findElements(By.xpath("//tr[@class]"));
+
+        for (WebElement eachElement2 : topSellingItemsDataElementList1) {
+
+            System.out.println(eachElement2.getText() + "  ");
+        }
+
+
+        System.out.println("\nPage 1 : " + trendlifebuyPage.topSellingItemResultTableInfo.getText() + "\n");
+
+        javaScript.executeScript("arguments[0].scrollIntoView();", topSellingItemsDataElementList1.get(9));
+
+        String topSellingItems0 = topSellingItemsDataElementList1.get(0).getText();
+        String topSellingItems1 = topSellingItemsDataElementList1.get(1).getText();
+        String topSellingItems2 = topSellingItemsDataElementList1.get(2).getText();
+        String topSellingItems3 = topSellingItemsDataElementList1.get(3).getText();
+        String topSellingItems4 = topSellingItemsDataElementList1.get(4).getText();
+
+        ReusableMethods.bekle(2);
+        trendlifebuyPage.topSellingItemNextPageButton.click();
+        ReusableMethods.bekle(2);
+
+
+        List<WebElement> topSellingItemsDataElementList2 = Driver.getDriver().findElements(By.xpath("//tr[@class]"));
+
+        for (WebElement eachElement2 : topSellingItemsDataElementList2) {
+
+            System.out.println(eachElement2.getText() + "  ");
+        }
+
+
+        System.out.println("\nPage 2 : " + trendlifebuyPage.topSellingItemResultTableInfo.getText());
+
+        javaScript.executeScript("arguments[0].scrollIntoView();", topSellingItemsDataElementList2.get(9));
+
+        String topSellingItemsA = topSellingItemsDataElementList2.get(0).getText();
+        String topSellingItemsB = topSellingItemsDataElementList2.get(1).getText();
+        String topSellingItemsC = topSellingItemsDataElementList2.get(2).getText();
+        String topSellingItemsD = topSellingItemsDataElementList2.get(3).getText();
+        String topSellingItemsE = topSellingItemsDataElementList2.get(4).getText();
+
+        assertNotEquals(topSellingItemsA, topSellingItems0);
+        assertNotEquals(topSellingItemsB, topSellingItems1);
+        assertNotEquals(topSellingItemsC, topSellingItems2);
+        assertNotEquals(topSellingItemsD, topSellingItems3);
+        assertNotEquals(topSellingItemsE, topSellingItems4);
+
+
+        ReusableMethods.bekle(2);
+        trendlifebuyPage.topSellingItemNextPageButton.click();
+
+        ReusableMethods.bekle(2);
+        System.out.println("\nPage 3 : " + trendlifebuyPage.topSellingItemResultTableInfo.getText());
+
+
+
+    }
 
 }

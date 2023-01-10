@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="24.286">
-    <testcase classname="US_046 As an administrator, I want the Top Selling Item page to be able to see the list of the most sold products on the site." name="TC_04603 It must be verified that the best selling products in the Top Selling Item list are listed under the headings Seller, Product, Total Sale , Average Rating" time="23.334">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="33.009">
+    <testcase classname="US_046 As an administrator, I want the Top Selling Item page to be able to see the list of the most sold products on the site." name="TC_04604 Verify that there are transitions between pages in the Top Selling List." time="32.336">
         <system-out>
             <![CDATA[Given Go to "myUrl" page....................................................passed
 Then Enter a valid "Email" address and "Password" in the relevant fields on the page that opens, then click the SIGN IN button..passed
 Then Then a message about successful login should appear in a green box in the upper right corner of the screen..passed
 Then The Admin Reports Title should be clickable under the CONTENT title on the left side of the screen on the Dashboard page..passed
 Then Click on the link button titled Top Selling Item from the options listed under the Admin Reports Title..passed
-Then It should be verified that the top selling products are listed under the headings Seller, Product, Total Sale, Average Rating on the page that opens..passed
+Then Click on the direction arrows or page numbers at the bottom of the page to switch between the pages where the products are listed..passed
+Then Then it should be verified that there are transitions between the pages in the Top Selling Item List and that the pages change..passed
 ]]>
         </system-out>
     </testcase>

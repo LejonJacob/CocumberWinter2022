@@ -392,6 +392,12 @@ public class TrendlifebuyPage {
     @FindBy(xpath = "//div[@id='visitorTable_info']")
     public WebElement topSellingItemResultTableInfo;
 
+    @FindBy(xpath = "//i[@class='ti-arrow-right']")
+    public WebElement topSellingItemNextPageButton;
+
+    @FindBy(xpath = "//i[@class='ti-arrow-left']")
+    public WebElement topSellingItemPreviousPageButton;
+
 
     public void GetChromeOptions()
     {
